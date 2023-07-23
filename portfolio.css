@@ -1,0 +1,2588 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style-type: none;
+}
+
+:root {
+
+
+    /* Fonts */
+
+    --nav-logo-font-faminly--:'Montserrat', sans-serif;
+    --hero-font-family--:'Oswald', sans-serif;
+    --hero2-font-family--: 'Raleway', sans-serif;
+    --body-font-family--:'Lato', sans-serif;
+
+
+    /* colors */
+
+    --hero-nav-color--: rgb(12, 58, 74);
+    --hero-nav-text-color--: #ffffff;
+    --nav-btn-color--: #FFA500;
+    --body-background--: #ffffff;
+    --body-text-color--: #333333;
+    --dark-gray--:#CCCCCC;
+    --light-gray--:#F5F5F5;
+}
+
+body{
+    font-family: var(--body-font-family--);
+    color: var(--body-text-color--);
+    background: var(--body-background--);
+    scroll-behavior: smooth;
+}
+
+.hamburger .line{
+    width: 35px;
+    height: 3px;
+    margin: 5px;
+    background-color: var(--hero-nav-text-color--);
+}
+
+.hamburger{
+    display: none;
+}
+
+/* Styles for screens 1200px and above (e.g., desktops) */
+@media only screen and (min-width: 1200px){
+
+    header{
+        background-color: var(--hero-nav-color--);
+        position: sticky;
+        top: 0;
+        z-index: 2;
+
+    }
+
+    nav{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        margin: 0px 80px;
+        padding-top: 30px;
+        padding-bottom: 30px;
+    }
+
+    .nav-logo{
+        color: var(--hero-nav-text-color--);
+        font-family: var(--nav-logo-font-faminly--);
+        font-size: 30px;
+        font-weight: bold;
+        letter-spacing: 3px;
+    }
+
+    .nav-logo span{
+        color: var(--nav-btn-color--);
+    }
+
+    nav .nav-items{
+        display: flex;
+        gap: 30px;
+        align-items: center;
+    }
+
+    nav .nav-items a{
+        font-weight: bold;
+        font-size: 18px;
+        color: var(--hero-nav-text-color--);
+        font-family: var(--nav-logo-font-faminly--);
+        position: relative;
+    }
+
+    /* Hover state */
+  nav .nav-items a:hover {
+    color: var(--nav-btn-color--);
+  }
+  
+  /* Active state */
+  nav .nav-items a.active {
+    color: white;
+  }
+  
+  /* Add :before and :after pseudo-elements */
+  nav .nav-items a:before,
+  nav .nav-items a:after {
+    content: "";
+    position: absolute;
+    height: 2px;
+    width: 0;
+    background-color: var(--nav-btn-color--);
+    bottom: -2px;
+    transition: width 0.2s ease;
+  }
+  
+  /* Style :before for active and hover state */
+  nav .nav-items a.active:before,
+  nav .nav-items a:hover:before {
+    width: 100%;
+    
+  }
+
+    nav .nav-btn{
+        border: none;
+        outline: none;
+        color: var(--hero-nav-text-color--);
+        background-color: var(--nav-btn-color--);
+        border-radius: 10px;
+        padding: 10px 15px;
+        font-size: 18px;
+        font-weight: bold;
+        font-family: var(--nav-logo-font-faminly--);
+        cursor: pointer;
+    }
+
+    nav .nav-btn:hover{
+        background-color: transparent;
+        border: 1px solid var(--nav-btn-color--);
+    }
+
+    nav .nav-btn a{
+        color: var(--hero-nav-text-color--);
+        font-size: 18px;
+        font-weight: bold;
+        font-family: var(--nav-logo-font-faminly--);
+        cursor: pointer;
+    }
+
+    .hamburger{
+        display: none;
+    }
+
+    .slide-in {
+        opacity: 0;
+        transform: translateY(50px); /* Start the element 50px below its original position */
+        transition: opacity 0.5s ease, transform 0.5s ease;
+    }
+
+    .slide-in.active {
+        opacity: 1;
+        transform: translateY(0); /* Slide the element back to its original position */
+    }
+
+    /* hero section */
+
+    .portfolio-hero{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        min-height: 50vh;
+    }
+
+    .portfolio-hero h1{
+        font-size: 40px;
+        font-weight: bold;
+        font-family: 'Oswald', sans-serif;
+        padding-bottom: 20px;
+        letter-spacing: 5px;
+    }
+
+    .portfolio-hero h3{
+        font-size: 20px;
+        font-weight: bold;
+        font-family: 'Oswald', sans-serif;
+        padding-bottom: 20px;
+        letter-spacing: 3px;
+    }
+
+    /* Projects nav */
+
+    .project-nav{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-color: var(--light-gray--);
+    }
+
+    .project-nav button{
+        border: none;
+        outline: none;
+        padding: 15px 30px;
+        font-weight: bold;
+        cursor: pointer;
+        background: none;
+    }
+
+    
+
+    .project-tabs{
+        background-color: var(--light-gray--);
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding: 50px 0px;
+    }
+
+    button.tab-active{
+        color: var(--hero-nav-text-color--);
+        background-color: var(--hero-nav-color--);
+    }
+
+     .tabs-main .project-tabs{
+        display: none;
+        
+    }
+
+    .tabs-main .project-tabs.content-active{
+        display: block;
+  
+    }
+
+    .project-tabs h2{
+        font-size: 24px;
+        line-height: 35px;
+
+    }
+
+    .first-card{
+        width: 300px;
+        height: 400px;
+        box-shadow: 2px 4px 4px rgba(0, 0, 0, 0.2);
+        background: linear-gradient(135deg, rgba(255, 255, 255, 0.308), rgba(12, 58, 74, 0.582));
+        backdrop-filter: blur(10px);
+        border-radius: 10px;
+        padding: 25px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    .card-img{
+        width: 100%;
+        height: 250px;
+        background: #FFA500;
+        background: url(asset/images/devon-janse-van-rensburg-DU8Z5djVJtg-unsplash.jpg) no-repeat;
+        background-size: cover;
+        background-position: center;
+        border-radius: 10px;
+        padding: 30px;
+        object-fit: cover;
+    }
+
+
+    .first-card-img-1{
+        width: 100%;
+        height: 250px;
+        background: url(asset/images/office-sec-3.jpg) no-repeat;
+        background-size: cover;
+        background-position: center;
+        border-radius: 10px;
+        padding: 30px;
+        object-fit: cover;
+    }
+
+     .first-card-img-2{
+        width: 100%;
+        height: 250px;
+        background: url(asset/images/dinning-room-1.jpg) no-repeat;
+        background-size: cover;
+        background-position: center;
+        border-radius: 10px;
+        padding: 30px;
+        object-fit: cover;
+    }
+
+     .first-card-img-3{
+        width: 100%;
+        height: 250px;
+        background: url(asset/images/office-1.jpg) no-repeat;
+        background-size: cover;
+        background-position: center;
+        border-radius: 10px;
+        padding: 30px;
+        object-fit: cover;
+    }
+
+    .first-card-img-4{
+        width: 100%;
+        height: 250px;
+        background: url(asset/images/living-room-2.jpg) no-repeat;
+        background-size: cover;
+        background-position: center;
+        border-radius: 10px;
+        padding: 30px;
+        object-fit: cover;
+    }
+
+    /* living section */
+
+    .living-card-1{
+        width: 100%;
+        height: 250px;
+        background: url(asset/images/living-room-1.jpg) no-repeat;
+        background-size: cover;
+        background-position: center;
+        border-radius: 10px;
+        padding: 30px;
+        object-fit: cover;
+    }
+
+    .living-card-2{
+        width: 100%;
+        height: 250px;
+        background: url(asset/images/living-room-2.jpg) no-repeat;
+        background-size: cover;
+        background-position: center;
+        border-radius: 10px;
+        padding: 30px;
+        object-fit: cover;
+    }
+
+    .living-card-3{
+        width: 100%;
+        height: 250px;
+        background: url(asset/images/main-tab-living.jpg) no-repeat;
+        background-size: cover;
+        background-position: center;
+        border-radius: 10px;
+        padding: 30px;
+        object-fit: cover;
+    }
+
+    .living-card-4{
+        width: 100%;
+        height: 250px;
+        background: url(asset/images/main-tab-living.jpg) no-repeat;
+        background-size: cover;
+        background-position: center;
+        border-radius: 10px;
+        padding: 30px;
+        object-fit: cover;
+    }
+
+    .living-card-5{
+        width: 100%;
+        height: 250px;
+        background: url(asset/images/living-room-2.jpg) no-repeat;
+        background-size: cover;
+        background-position: center;
+        border-radius: 10px;
+        padding: 30px;
+        object-fit: cover;
+    }
+
+    .living-card-6{
+        width: 100%;
+        height: 250px;
+        background: url(asset/images/living-room-1.jpg) no-repeat;
+        background-size: cover;
+        background-position: center;
+        border-radius: 10px;
+        padding: 30px;
+        object-fit: cover;
+    }
+    
+    
+
+    .first-card h3{
+        font-size: 20px;
+        color:var(--hero-nav-color--);
+        padding-top: 10px;
+        padding-bottom: 10px;
+    }
+
+    .first-card p{
+        font-size: 15px;
+  
+    }
+
+    .project-tabs-content{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        row-gap: 40px;
+        padding: 40px 80px;
+    }
+
+    .load-btn{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .load-btn .js-load-more{
+        border: none;
+        outline: none;
+        border-radius: 10px;
+        font-weight: bold;
+        padding: 15px 20px;
+        background-color: var(--nav-btn-color--);
+        color: var(--hero-nav-text-color--);
+        cursor: pointer;
+        transition: all 0.3s ease;
+    }
+
+    .js-load-content{
+        display: none;
+        
+    }
+
+    .load-btn .js-load-more:hover{
+        background-color: var(--dark-gray--);
+    }
+
+    .js-show-less{
+        border: none;
+        outline: none;
+        border-radius: 10px;
+        font-weight: bold;
+        padding: 15px 20px;
+        background-color: var(--dark-gray--);
+        color: var(--hero-nav-text-color--);
+        cursor: pointer;
+        transition: all 0.3s ease;
+        display: none;
+    }
+
+    /* Banner section */
+
+    .banner{
+        margin: 0px 80px;
+        padding: 50px 0px;
+    }
+
+    .banner .banner-content{
+        border-radius: 50px;
+        height: 60vh;
+        background: url(asset/images/living-room-1.jpg) no-repeat;
+        background-position: center;
+        background-size: cover;
+        
+    }
+
+    .banner .banner-content h2{
+        font-size: 30px;
+        color: var(--hero-nav-text-color--);
+        line-height: 40px;
+    }
+
+    .banner-bgcolor{
+        background:rgba(12, 58, 74, 0.582);
+        backdrop-filter: blur(10px);
+        width: 100%;
+        height: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        border-radius: 50px;
+    }
+
+    /* Contact section */
+
+    .contact-portfolio{
+        background-color: var(--hero-nav-color--);
+        padding: 40px 80px;
+        height: 70vh;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    .contact-container{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 50px;
+    }
+
+    .contact-first-content{
+        flex: 1;
+    }
+
+    .contact-first-content h3{
+        font-weight: bold;
+        font-size: 20px;
+        color: var(--dark-gray--);
+    }
+
+    .contact-first-content h2{
+        font-weight: bold;
+        font-size: 30px;
+        color: var(--hero-nav-text-color--);
+        padding-top: 10px;
+    }
+
+    .contact-first-content .contact-details{
+        display: flex;
+        padding-top: 20px;
+        gap: 20px;
+    }
+
+    .contact-first-content .contact-details h4{
+        font-weight: bold;
+        font-size: 20px;
+        color: var(--dark-gray--);
+    }
+
+    .contact-first-content .contact-details h4 .fa-circle{
+        color: var(--nav-btn-color--);
+        font-size: 15px;
+    }
+
+    .contact-second-content{
+        flex: 1;
+    }
+
+    .contact-second-content form{
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .contact-second-content form input{
+        outline: none;
+        border: 1px solid var(--dark-gray--);
+        border-radius: 10px;
+        padding: 15px;
+
+    }
+
+    
+
+    .contact-second-content form #portfolio-message{
+        height: 100px;
+        outline: none;
+        border: none;
+        border-radius: 10px;
+        padding: 15px;
+
+    }
+
+    .contact-second-content form input:focus{
+        outline: none;
+        border: 1px solid var(--nav-btn-color--);
+
+    }
+
+    .contact-second-content form button{
+        outline: none;
+        border: 1px solid var(--nav-btn-color--);
+        border-radius: 10px;
+        padding: 15px;
+        background: none;
+        color: var(--nav-btn-color--);
+        font-size: 15px;
+        font-weight: bold;
+        letter-spacing: 2px;
+        cursor: pointer;
+        transition: all 0.3s ease-in-out;
+
+    }
+
+    .contact-second-content form button:hover{
+        background: var(--hero-nav-text-color--);
+        border: none;
+        color: var(--body-text-color--);
+
+
+    }
+
+    /* footer section */
+
+    footer{
+        background-color: var(--hero-nav-color--);
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        position: relative;
+    }
+
+    .footer-content{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 90px 80px;
+        margin-bottom: 40px;
+    }
+
+    .footer-content .logo-items p{
+        font-size: 24px;
+        color: var(--hero-nav-text-color--);
+        padding-top: 15px;
+    }
+
+    .footer-content .logo-items h4{
+        font-size: 25px;
+        color: var(--hero-nav-text-color--);
+        padding-top: 15px;
+    }
+
+    .footer-content .logo-items h4 i{
+        padding-right: 10px;
+        color: var(--nav-btn-color--);
+    }
+
+    footer h3{
+        font-size: 20px;
+        color: var(--hero-nav-text-color--);
+        padding-bottom: 20px;
+    }
+
+    footer h5{
+        padding-bottom: 15px;
+    }
+
+    footer h5 a{
+        font-size: 16px;
+        color: var(--hero-nav-text-color--);
+        padding-bottom: 20px;
+        cursor: pointer;
+        transition: all 0.3s ease-in-out;
+    }
+
+    footer h5 a:hover{
+        color: var(--nav-btn-color--);
+    }
+
+    footer h5 a i{
+        padding-right: 10px;
+    }
+
+    .copy-rights{
+        color: var(--hero-nav-text-color--);
+        position: absolute;
+        bottom: 0;
+        width: 100%;
+        text-align: center;
+        padding: 20px 0px;
+    }
+
+
+
+
+}
+
+
+/* Styles for screens between 992px and 1199px (e.g., laptops) */
+@media only screen and (min-width: 992px) and (max-width: 1199px){
+    header{
+        background-color: var(--hero-nav-color--);
+        position: sticky;
+        top: 0;
+        z-index: 2;
+
+    }
+
+    nav{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        margin: 0px 50px;
+        padding-top: 30px;
+        padding-bottom: 30px;
+    }
+
+    .nav-logo{
+        color: var(--hero-nav-text-color--);
+        font-family: var(--nav-logo-font-faminly--);
+        font-size: 30px;
+        font-weight: bold;
+        letter-spacing: 3px;
+    }
+
+    .nav-logo span{
+        color: var(--nav-btn-color--);
+    }
+
+    nav .nav-items{
+        display: flex;
+        gap: 30px;
+        align-items: center;
+    }
+
+    nav .nav-items a{
+        font-weight: bold;
+        font-size: 18px;
+        color: var(--hero-nav-text-color--);
+        font-family: var(--nav-logo-font-faminly--);
+        position: relative;
+    }
+
+    /* Hover state */
+  nav .nav-items a:hover {
+    color: var(--nav-btn-color--);
+  }
+  
+  /* Active state */
+  nav .nav-items a.active {
+    color: white;
+  }
+  
+  /* Add :before and :after pseudo-elements */
+  nav .nav-items a:before,
+  nav .nav-items a:after {
+    content: "";
+    position: absolute;
+    height: 2px;
+    width: 0;
+    background-color: var(--nav-btn-color--);
+    bottom: -2px;
+    transition: width 0.2s ease;
+  }
+  
+  /* Style :before for active and hover state */
+  nav .nav-items a.active:before,
+  nav .nav-items a:hover:before {
+    width: 100%;
+    
+  }
+
+    nav .nav-btn{
+        border: none;
+        outline: none;
+        color: var(--hero-nav-text-color--);
+        background-color: var(--nav-btn-color--);
+        border-radius: 10px;
+        padding: 10px 15px;
+        font-size: 18px;
+        font-weight: bold;
+        font-family: var(--nav-logo-font-faminly--);
+        cursor: pointer;
+    }
+
+    nav .nav-btn:hover{
+        background-color: transparent;
+        border: 1px solid var(--nav-btn-color--);
+    }
+
+    nav .nav-btn a{
+        color: var(--hero-nav-text-color--);
+        font-size: 18px;
+        font-weight: bold;
+        font-family: var(--nav-logo-font-faminly--);
+        cursor: pointer;
+    }
+
+    .hamburger{
+        display: none;
+    }
+
+    .slide-in {
+        opacity: 0;
+        transform: translateY(50px); /* Start the element 50px below its original position */
+        transition: opacity 0.5s ease, transform 0.5s ease;
+    }
+
+    .slide-in.active {
+        opacity: 1;
+        transform: translateY(0); /* Slide the element back to its original position */
+    }
+
+    /* hero section */
+
+    .portfolio-hero{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        min-height: 50vh;
+    }
+
+    .portfolio-hero h1{
+        font-size: 40px;
+        font-weight: bold;
+        font-family: 'Oswald', sans-serif;
+        padding-bottom: 20px;
+        letter-spacing: 5px;
+    }
+
+    .portfolio-hero h3{
+        font-size: 20px;
+        font-weight: bold;
+        font-family: 'Oswald', sans-serif;
+        padding-bottom: 20px;
+        letter-spacing: 3px;
+    }
+
+    /* Projects nav */
+
+    .project-nav{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-color: var(--light-gray--);
+    }
+
+    .project-nav button{
+        border: none;
+        outline: none;
+        padding: 15px 30px;
+        font-weight: bold;
+        cursor: pointer;
+        background: none;
+    }
+
+    
+
+    .project-tabs{
+        background-color: var(--light-gray--);
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding: 50px 0px;
+    }
+
+    button.tab-active{
+        color: var(--hero-nav-text-color--);
+        background-color: var(--hero-nav-color--);
+    }
+
+     .tabs-main .project-tabs{
+        display: none;
+        
+    }
+
+    .tabs-main .project-tabs.content-active{
+        display: block;
+  
+    }
+
+    .project-tabs h2{
+        font-size: 24px;
+        line-height: 35px;
+
+    }
+
+    .first-card{
+        width: 300px;
+        height: 400px;
+        box-shadow: 2px 4px 4px rgba(0, 0, 0, 0.2);
+        background: linear-gradient(135deg, rgba(255, 255, 255, 0.308), rgba(12, 58, 74, 0.582));
+        backdrop-filter: blur(10px);
+        border-radius: 10px;
+        padding: 25px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    .card-img{
+        width: 100%;
+        height: 250px;
+        background: #FFA500;
+        background: url(asset/images/devon-janse-van-rensburg-DU8Z5djVJtg-unsplash.jpg) no-repeat;
+        background-size: cover;
+        background-position: center;
+        border-radius: 10px;
+        padding: 30px;
+        object-fit: cover;
+    }
+
+
+    .first-card-img-1{
+        width: 100%;
+        height: 250px;
+        background: url(asset/images/office-sec-3.jpg) no-repeat;
+        background-size: cover;
+        background-position: center;
+        border-radius: 10px;
+        padding: 30px;
+        object-fit: cover;
+    }
+
+     .first-card-img-2{
+        width: 100%;
+        height: 250px;
+        background: url(asset/images/dinning-room-1.jpg) no-repeat;
+        background-size: cover;
+        background-position: center;
+        border-radius: 10px;
+        padding: 30px;
+        object-fit: cover;
+    }
+
+     .first-card-img-3{
+        width: 100%;
+        height: 250px;
+        background: url(asset/images/office-1.jpg) no-repeat;
+        background-size: cover;
+        background-position: center;
+        border-radius: 10px;
+        padding: 30px;
+        object-fit: cover;
+    }
+
+    .first-card-img-4{
+        width: 100%;
+        height: 250px;
+        background: url(asset/images/living-room-2.jpg) no-repeat;
+        background-size: cover;
+        background-position: center;
+        border-radius: 10px;
+        padding: 30px;
+        object-fit: cover;
+    }
+
+    /* living section */
+
+    .living-card-1{
+        width: 100%;
+        height: 250px;
+        background: url(asset/images/living-room-1.jpg) no-repeat;
+        background-size: cover;
+        background-position: center;
+        border-radius: 10px;
+        padding: 30px;
+        object-fit: cover;
+    }
+
+    .living-card-2{
+        width: 100%;
+        height: 250px;
+        background: url(asset/images/living-room-2.jpg) no-repeat;
+        background-size: cover;
+        background-position: center;
+        border-radius: 10px;
+        padding: 30px;
+        object-fit: cover;
+    }
+
+    .living-card-3{
+        width: 100%;
+        height: 250px;
+        background: url(asset/images/main-tab-living.jpg) no-repeat;
+        background-size: cover;
+        background-position: center;
+        border-radius: 10px;
+        padding: 30px;
+        object-fit: cover;
+    }
+
+    .living-card-4{
+        width: 100%;
+        height: 250px;
+        background: url(asset/images/main-tab-living.jpg) no-repeat;
+        background-size: cover;
+        background-position: center;
+        border-radius: 10px;
+        padding: 30px;
+        object-fit: cover;
+    }
+
+    .living-card-5{
+        width: 100%;
+        height: 250px;
+        background: url(asset/images/living-room-2.jpg) no-repeat;
+        background-size: cover;
+        background-position: center;
+        border-radius: 10px;
+        padding: 30px;
+        object-fit: cover;
+    }
+
+    .living-card-6{
+        width: 100%;
+        height: 250px;
+        background: url(asset/images/living-room-1.jpg) no-repeat;
+        background-size: cover;
+        background-position: center;
+        border-radius: 10px;
+        padding: 30px;
+        object-fit: cover;
+    }
+    
+    
+
+    .first-card h3{
+        font-size: 20px;
+        color:var(--hero-nav-color--);
+        padding-top: 10px;
+        padding-bottom: 10px;
+    }
+
+    .first-card p{
+        font-size: 15px;
+  
+    }
+
+    .project-tabs-content{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        row-gap: 40px;
+        padding: 40px 50px;
+    }
+
+    .load-btn{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .load-btn .js-load-more{
+        border: none;
+        outline: none;
+        border-radius: 10px;
+        font-weight: bold;
+        padding: 15px 20px;
+        background-color: var(--nav-btn-color--);
+        color: var(--hero-nav-text-color--);
+        cursor: pointer;
+        transition: all 0.3s ease;
+    }
+
+    .js-load-content{
+        display: none;
+        
+    }
+
+    .load-btn .js-load-more:hover{
+        background-color: var(--dark-gray--);
+    }
+
+    .js-show-less{
+        border: none;
+        outline: none;
+        border-radius: 10px;
+        font-weight: bold;
+        padding: 15px 20px;
+        background-color: var(--dark-gray--);
+        color: var(--hero-nav-text-color--);
+        cursor: pointer;
+        transition: all 0.3s ease;
+        display: none;
+    }
+
+    /* Banner section */
+
+    .banner{
+        margin: 0px 50px;
+        padding: 50px 0px;
+    }
+
+    .banner .banner-content{
+        border-radius: 50px;
+        height: 60vh;
+        background: url(asset/images/living-room-1.jpg) no-repeat;
+        background-position: center;
+        background-size: cover;
+        
+    }
+
+    .banner .banner-content h2{
+        font-size: 30px;
+        color: var(--hero-nav-text-color--);
+        line-height: 40px;
+    }
+
+    .banner-bgcolor{
+        background:rgba(12, 58, 74, 0.582);
+        backdrop-filter: blur(10px);
+        width: 100%;
+        height: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        border-radius: 50px;
+    }
+
+    /* Contact section */
+
+    .contact-portfolio{
+        background-color: var(--hero-nav-color--);
+        padding: 40px 50px;
+        height: 70vh;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    .contact-container{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 50px;
+    }
+
+    .contact-first-content{
+        flex: 1;
+    }
+
+    .contact-first-content h3{
+        font-weight: bold;
+        font-size: 20px;
+        color: var(--dark-gray--);
+    }
+
+    .contact-first-content h2{
+        font-weight: bold;
+        font-size: 30px;
+        color: var(--hero-nav-text-color--);
+        padding-top: 10px;
+    }
+
+    .contact-first-content .contact-details{
+        display: flex;
+        padding-top: 20px;
+        gap: 20px;
+    }
+
+    .contact-first-content .contact-details h4{
+        font-weight: bold;
+        font-size: 20px;
+        color: var(--dark-gray--);
+    }
+
+    .contact-first-content .contact-details h4 .fa-circle{
+        color: var(--nav-btn-color--);
+        font-size: 15px;
+    }
+
+    .contact-second-content{
+        flex: 1;
+    }
+
+    .contact-second-content form{
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .contact-second-content form input{
+        outline: none;
+        border: 1px solid var(--dark-gray--);
+        border-radius: 10px;
+        padding: 15px;
+
+    }
+
+    
+
+    .contact-second-content form #portfolio-message{
+        height: 100px;
+        outline: none;
+        border: none;
+        border-radius: 10px;
+        padding: 15px;
+
+    }
+
+    .contact-second-content form input:focus{
+        outline: none;
+        border: 1px solid var(--nav-btn-color--);
+
+    }
+
+    .contact-second-content form button{
+        outline: none;
+        border: 1px solid var(--nav-btn-color--);
+        border-radius: 10px;
+        padding: 15px;
+        background: none;
+        color: var(--nav-btn-color--);
+        font-size: 15px;
+        font-weight: bold;
+        letter-spacing: 2px;
+        cursor: pointer;
+        transition: all 0.3s ease-in-out;
+
+    }
+
+    .contact-second-content form button:hover{
+        background: var(--hero-nav-text-color--);
+        border: none;
+        color: var(--body-text-color--);
+
+
+    }
+
+    /* footer section */
+
+    footer{
+        background-color: var(--hero-nav-color--);
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        position: relative;
+    }
+
+    .footer-content{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 90px 50px;
+        margin-bottom: 40px;
+    }
+
+    .footer-content .logo-items p{
+        font-size: 24px;
+        color: var(--hero-nav-text-color--);
+        padding-top: 15px;
+    }
+
+    .footer-content .logo-items h4{
+        font-size: 25px;
+        color: var(--hero-nav-text-color--);
+        padding-top: 15px;
+    }
+
+    .footer-content .logo-items h4 i{
+        padding-right: 10px;
+        color: var(--nav-btn-color--);
+    }
+
+    footer h3{
+        font-size: 20px;
+        color: var(--hero-nav-text-color--);
+        padding-bottom: 20px;
+    }
+
+    footer h5{
+        padding-bottom: 15px;
+    }
+
+    footer h5 a{
+        font-size: 16px;
+        color: var(--hero-nav-text-color--);
+        padding-bottom: 20px;
+        cursor: pointer;
+        transition: all 0.3s ease-in-out;
+    }
+
+    footer h5 a:hover{
+        color: var(--nav-btn-color--);
+    }
+
+    footer h5 a i{
+        padding-right: 10px;
+    }
+
+    .copy-rights{
+        color: var(--hero-nav-text-color--);
+        position: absolute;
+        bottom: 0;
+        width: 100%;
+        text-align: center;
+        padding: 20px 0px;
+    }
+
+}
+
+/* Styles for screens between 768px and 991px (e.g., tablets) */
+@media only screen and (min-width: 768px) and (max-width: 991px){
+    header{
+        background-color: var(--hero-nav-color--);
+        position: sticky;
+        top: 0;
+        z-index: 2;
+    
+    }
+    
+    nav{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        margin: 0px 25px;
+        padding-top: 25px;
+        padding-bottom: 25px;
+    }
+    
+    .nav-logo{
+        color: var(--hero-nav-text-color--);
+        font-family: var(--nav-logo-font-faminly--);
+        font-size: 27px;
+        font-weight: bold;
+        letter-spacing: 3px;
+    }
+    
+    .nav-logo span{
+        color: var(--nav-btn-color--);
+    }
+    
+    nav .nav-items{
+        display: flex;
+        flex-direction: column;
+        gap: 50px;
+        align-items: center;
+        justify-content: center;
+        position: absolute;
+        width: 100vw;
+        height: 0;
+        opacity: 0;
+        background-color: var(--hero-nav-color--);
+        right: 0;
+        left: 0;
+        top: 6vh;
+        transition:all 0.3s ease;
+        overflow: hidden;
+    }
+
+
+    .nav-items.nav-trigger{
+        opacity: 1;
+        height: 100vh;
+    }
+    
+    nav .nav-items a{
+        font-weight: bold;
+        font-size: 25px;
+        color: var(--hero-nav-text-color--);
+        font-family: var(--nav-logo-font-faminly--);
+        position: relative;
+    }
+    
+    /* Hover state */
+    nav .nav-items a:hover {
+    color: var(--nav-btn-color--);
+    }
+    
+    /* Active state */
+    nav .nav-items a.active {
+    color: white;
+    }
+    
+    /* Add :before and :after pseudo-elements */
+    nav .nav-items a:before,
+    nav .nav-items a:after {
+    content: "";
+    position: absolute;
+    height: 2px;
+    width: 0;
+    background-color: var(--nav-btn-color--);
+    bottom: -2px;
+    transition: width 0.2s ease;
+    }
+    
+    /* Style :before for active and hover state */
+    nav .nav-items a.active:before,
+    nav .nav-items a:hover:before {
+    width: 100%;
+    
+    }
+    
+    
+    
+    nav .nav-btn{
+        border: none;
+        outline: none;
+        color: var(--hero-nav-text-color--);
+        background-color: var(--nav-btn-color--);
+        border-radius: 10px;
+        padding: 10px 15px;
+        font-weight: bold;
+        font-family: var(--nav-logo-font-faminly--);
+        cursor: pointer;
+        transition: All 0.3s ease-in-out;
+    }
+    
+    nav .nav-btn:hover{
+        background-color: transparent;
+        border: 1px solid var(--nav-btn-color--);
+    }
+    
+    nav .nav-btn a{
+        color: var(--hero-nav-text-color--);
+        font-size: 20px;
+        font-weight: bold;
+        font-family: var(--nav-logo-font-faminly--);
+        cursor: pointer;
+    }
+    
+    .hamburger{
+        display: block;
+        cursor: pointer;
+
+    }
+
+    
+
+    .toggle .line:nth-child(2){
+        opacity: 0;
+    }
+
+    .toggle .line:nth-child(1){
+        transform: rotate(-45deg) translate(-5px,6px);
+        transition: all 0.3s ease;
+    }
+
+    .toggle .line:nth-child(3){
+        transform: rotate(45deg) translate(-5px,-6px);
+        transition: all 0.3s ease;
+    }
+
+
+       /* hero section */
+
+       .portfolio-hero{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        min-height: 20vh;
+    }
+
+    .portfolio-hero h1{
+        font-size: 30px;
+        font-weight: bold;
+        font-family: 'Oswald', sans-serif;
+        padding-bottom: 20px;
+        letter-spacing: 5px;
+    }
+
+    .portfolio-hero h3{
+        font-size: 25px;
+        font-weight: bold;
+        font-family: 'Oswald', sans-serif;
+        padding-bottom: 20px;
+        letter-spacing: 3px;
+    }
+
+    /* Projects nav */
+
+    .project-nav{
+        display: grid;
+        grid-template-columns: repeat(6, 1fr);
+        overflow-x: scroll;
+        scroll-snap-type: x mandatory;
+        scroll-padding-bottom: 50px;
+        gap: 20px;
+        background-color: var(--light-gray--);
+        border: 1px solid var(--dark-gray--);
+    }
+
+    .project-nav button{
+        width: 180px;
+        border: none;
+        outline: none;
+        padding: 15px 30px;
+        font-weight: bold;
+        cursor: pointer;
+        background: none;
+        cursor: pointer;
+        scroll-snap-align: start;
+    }
+
+    
+
+    .project-tabs{
+        background-color: var(--light-gray--);
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding: 50px 0px;
+    }
+
+    button.tab-active{
+        color: var(--hero-nav-text-color--);
+        background-color: var(--hero-nav-color--);
+    }
+
+     .tabs-main .project-tabs{
+        display: none;
+        
+    }
+
+    .project-tabs-content{
+        display: grid;
+        grid-template-columns: 1fr;
+        padding: 0px;
+    }
+
+    .tabs-main .project-tabs.content-active{
+        display: block;
+  
+    }
+
+    .project-tabs h2{
+        font-size: 30px;
+        line-height: 35px;
+
+    }
+
+    .first-card{
+        width: 300px;
+        height: 400px;
+        box-shadow: 2px 4px 4px rgba(0, 0, 0, 0.2);
+        background: linear-gradient(135deg, rgba(255, 255, 255, 0.308), rgba(12, 58, 74, 0.582));
+        backdrop-filter: blur(10px);
+        border-radius: 10px;
+        padding: 25px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    .card-img{
+        width: 100%;
+        height: 250px;
+        background: #FFA500;
+        background: url(asset/images/devon-janse-van-rensburg-DU8Z5djVJtg-unsplash.jpg) no-repeat;
+        background-size: cover;
+        background-position: center;
+        border-radius: 10px;
+        padding: 30px;
+        object-fit: cover;
+    }
+
+
+    .first-card-img-1{
+        width: 100%;
+        height: 250px;
+        background: url(asset/images/office-sec-3.jpg) no-repeat;
+        background-size: cover;
+        background-position: center;
+        border-radius: 10px;
+        padding: 30px;
+        object-fit: cover;
+    }
+
+     .first-card-img-2{
+        width: 100%;
+        height: 250px;
+        background: url(asset/images/dinning-room-1.jpg) no-repeat;
+        background-size: cover;
+        background-position: center;
+        border-radius: 10px;
+        padding: 30px;
+        object-fit: cover;
+    }
+
+     .first-card-img-3{
+        width: 100%;
+        height: 250px;
+        background: url(asset/images/office-1.jpg) no-repeat;
+        background-size: cover;
+        background-position: center;
+        border-radius: 10px;
+        padding: 30px;
+        object-fit: cover;
+    }
+
+    .first-card-img-4{
+        width: 100%;
+        height: 250px;
+        background: url(asset/images/living-room-2.jpg) no-repeat;
+        background-size: cover;
+        background-position: center;
+        border-radius: 10px;
+        padding: 30px;
+        object-fit: cover;
+    }
+
+    /* living section */
+
+    .living-card-1{
+        width: 100%;
+        height: 250px;
+        background: url(asset/images/living-room-1.jpg) no-repeat;
+        background-size: cover;
+        background-position: center;
+        border-radius: 10px;
+        padding: 30px;
+        object-fit: cover;
+    }
+
+    .living-card-2{
+        width: 100%;
+        height: 250px;
+        background: url(asset/images/living-room-2.jpg) no-repeat;
+        background-size: cover;
+        background-position: center;
+        border-radius: 10px;
+        padding: 30px;
+        object-fit: cover;
+    }
+
+    .living-card-3{
+        width: 100%;
+        height: 250px;
+        background: url(asset/images/main-tab-living.jpg) no-repeat;
+        background-size: cover;
+        background-position: center;
+        border-radius: 10px;
+        padding: 30px;
+        object-fit: cover;
+    }
+
+    .living-card-4{
+        width: 100%;
+        height: 250px;
+        background: url(asset/images/main-tab-living.jpg) no-repeat;
+        background-size: cover;
+        background-position: center;
+        border-radius: 10px;
+        padding: 30px;
+        object-fit: cover;
+    }
+
+    .living-card-5{
+        width: 100%;
+        height: 250px;
+        background: url(asset/images/living-room-2.jpg) no-repeat;
+        background-size: cover;
+        background-position: center;
+        border-radius: 10px;
+        padding: 30px;
+        object-fit: cover;
+    }
+
+    .living-card-6{
+        width: 100%;
+        height: 250px;
+        background: url(asset/images/living-room-1.jpg) no-repeat;
+        background-size: cover;
+        background-position: center;
+        border-radius: 10px;
+        padding: 30px;
+        object-fit: cover;
+    }
+    
+    
+
+    .first-card h3{
+        font-size: 23px;
+        color:var(--hero-nav-color--);
+        padding-top: 10px;
+        padding-bottom: 10px;
+    }
+
+    .first-card p{
+        font-size: 15px;
+  
+    }
+
+    .project-tabs-content{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        justify-content: space-around;
+        flex-wrap: wrap;
+        row-gap: 40px;
+        padding: 40px 20px;
+    }
+
+    .load-btn{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .load-btn .js-load-more{
+        border: none;
+        outline: none;
+        border-radius: 10px;
+        font-weight: bold;
+        padding: 15px 20px;
+        background-color: var(--nav-btn-color--);
+        color: var(--hero-nav-text-color--);
+        cursor: pointer;
+        transition: all 0.3s ease;
+    }
+
+    .js-load-content{
+        display: none;
+        
+    }
+
+    .load-btn .js-load-more:hover{
+        background-color: var(--dark-gray--);
+    }
+
+    .js-show-less{
+        border: none;
+        outline: none;
+        border-radius: 10px;
+        font-weight: bold;
+        padding: 15px 20px;
+        background-color: var(--dark-gray--);
+        color: var(--hero-nav-text-color--);
+        cursor: pointer;
+        transition: all 0.3s ease;
+        display: none;
+    }
+
+    /* Banner section */
+
+    .banner{
+        margin: 0px;
+        padding: 50px 0px;
+    }
+
+    .banner .banner-content{
+        border-radius: 50px;
+        height: 60vh;
+        background: url(asset/images/living-room-1.jpg) no-repeat;
+        background-position: center;
+        background-size: cover;
+        
+    }
+
+    .for-larger-screens{
+        display: none;
+    }
+
+    .banner .banner-content h2{
+        font-size: 28px;
+        color: var(--hero-nav-text-color--);
+    }
+
+    .banner-bgcolor{
+        background:rgba(12, 58, 74, 0.582);
+        backdrop-filter: blur(10px);
+        width: 100%;
+        height: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        border-radius: 50px;
+    }
+
+    /* Contact section */
+
+    .contact-portfolio{
+        background-color: var(--hero-nav-color--);
+        padding: 40px 20px;
+        display: flex;
+        justify-content: center;
+
+    }
+
+    .contact-container{
+        display: flex;
+        align-items: center;
+        gap: 100px;
+       
+    }
+
+    .contact-first-content{
+        flex: 1;
+    }
+
+    .contact-first-content h3{
+        font-weight: bold;
+        font-size: 20px;
+        color: var(--dark-gray--);
+    }
+
+    .contact-first-content h2{
+        font-weight: bold;
+        font-size: 28px;
+        color: var(--hero-nav-text-color--);
+        padding-top: 10px;
+    }
+
+    .contact-first-content .contact-details{
+        display: flex;
+        flex-direction: column;
+        padding-top: 20px;
+        gap: 20px;
+    }
+
+    .contact-first-content .contact-details h4{
+        font-weight: bold;
+        font-size: 18px;
+        color: var(--dark-gray--);
+    }
+
+    .contact-first-content .contact-details h4 .fa-circle{
+        color: var(--nav-btn-color--);
+        font-size: 15px;
+    }
+
+    .contact-second-content{
+        flex: 1;
+    }
+
+    .contact-second-content form{
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .contact-second-content form input{
+        outline: none;
+        border: 1px solid var(--dark-gray--);
+        border-radius: 10px;
+        padding: 15px;
+
+    }
+
+    
+
+    .contact-second-content form #portfolio-message{
+        height: 100px;
+        outline: none;
+        border: none;
+        border-radius: 10px;
+        padding: 15px;
+
+    }
+
+    .contact-second-content form input:focus{
+        outline: none;
+        border: 1px solid var(--nav-btn-color--);
+
+    }
+
+    .contact-second-content form button{
+        outline: none;
+        border: 1px solid var(--nav-btn-color--);
+        border-radius: 10px;
+        padding: 15px;
+        background: none;
+        color: var(--nav-btn-color--);
+        font-size: 15px;
+        font-weight: bold;
+        letter-spacing: 2px;
+        cursor: pointer;
+        transition: all 0.3s ease-in-out;
+
+    }
+
+    .contact-second-content form button:hover{
+        background: var(--hero-nav-text-color--);
+        border: none;
+        color: var(--body-text-color--);
+
+
+    }
+
+
+
+     /* footer section */
+
+     footer{
+        background-color: var(--hero-nav-color--);
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        position: relative;
+    }
+
+    .footer-content{
+        display: flex;
+        justify-content: space-between;
+        padding: 90px 25px;
+        margin-bottom: 40px;
+    }
+
+    .footer-content .logo-items p{
+        font-size: 20px;
+        color: var(--hero-nav-text-color--);
+        padding-top: 15px;
+    }
+
+    .footer-content .logo-items h4{
+        font-size: 20px;
+        color: var(--hero-nav-text-color--);
+        padding-top: 15px;
+    }
+
+    .footer-content .logo-items h4 i{
+        padding-right: 10px;
+        color: var(--nav-btn-color--);
+    }
+
+    footer h3{
+        font-size: 20px;
+        color: var(--hero-nav-text-color--);
+        padding-bottom: 20px;
+    }
+
+    footer h5{
+        padding-bottom: 15px;
+    }
+
+    footer h5 a{
+        font-size: 16px;
+        color: var(--hero-nav-text-color--);
+        padding-bottom: 20px;
+        cursor: pointer;
+        transition: all 0.3s ease-in-out;
+    }
+
+    footer h5 a:hover{
+        color: var(--nav-btn-color--);
+    }
+
+    footer h5 a i{
+        padding-right: 10px;
+    }
+
+    .copy-rights{
+        color: var(--hero-nav-text-color--);
+        position: absolute;
+        bottom: 0;
+        width: 100%;
+        text-align: center;
+        padding: 20px 0px;
+    }
+}
+
+
+/* Styles for screens smaller than or equal to 767px (e.g., mobile devices) */
+@media only screen and (max-width: 767px){
+
+
+    header{
+        background-color: var(--hero-nav-color--);
+        position: sticky;
+        top: 0;
+        z-index: 2;
+    
+    }
+    
+    nav{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        margin: 0px 20px;
+        padding-top: 25px;
+        padding-bottom: 25px;
+    }
+    
+    .nav-logo{
+        color: var(--hero-nav-text-color--);
+        font-family: var(--nav-logo-font-faminly--);
+        font-size: 18px;
+        font-weight: bold;
+        letter-spacing: 3px;
+    }
+    
+    .nav-logo span{
+        color: var(--nav-btn-color--);
+    }
+    
+    nav .nav-items{
+        display: flex;
+        flex-direction: column;
+        gap: 50px;
+        align-items: center;
+        justify-content: center;
+        position: absolute;
+        width: 100vw;
+        height: 0;
+        opacity: 0;
+        background-color: var(--hero-nav-color--);
+        right: 0;
+        left: 0;
+        top: 11.5vh;
+        transition:all 0.3s ease;
+        overflow: hidden;
+    }
+
+
+    .nav-items.nav-trigger{
+        opacity: 1;
+        height: 100vh;
+    }
+    
+    nav .nav-items a{
+        font-weight: bold;
+        font-size: 18px;
+        color: var(--hero-nav-text-color--);
+        font-family: var(--nav-logo-font-faminly--);
+        position: relative;
+    }
+    
+    /* Hover state */
+    nav .nav-items a:hover {
+    color: var(--nav-btn-color--);
+    }
+    
+    /* Active state */
+    nav .nav-items a.active {
+    color: white;
+    }
+    
+    /* Add :before and :after pseudo-elements */
+    nav .nav-items a:before,
+    nav .nav-items a:after {
+    content: "";
+    position: absolute;
+    height: 2px;
+    width: 0;
+    background-color: var(--nav-btn-color--);
+    bottom: -2px;
+    transition: width 0.2s ease;
+    }
+    
+    /* Style :before for active and hover state */
+    nav .nav-items a.active:before,
+    nav .nav-items a:hover:before {
+    width: 100%;
+    
+    }
+    
+    
+    
+    nav .nav-btn{
+        border: none;
+        outline: none;
+        color: var(--hero-nav-text-color--);
+        background-color: var(--nav-btn-color--);
+        border-radius: 10px;
+        padding: 9px 9px;
+        font-size: 16px;
+        font-weight: bold;
+        font-family: var(--nav-logo-font-faminly--);
+        cursor: pointer;
+        transition: All 0.3s ease-in-out;
+    }
+    
+    nav .nav-btn:hover{
+        background-color: transparent;
+        border: 1px solid var(--nav-btn-color--);
+    }
+    
+    nav .nav-btn a{
+        color: var(--hero-nav-text-color--);
+        font-size: 15px;
+        font-weight: bold;
+        font-family: var(--nav-logo-font-faminly--);
+        cursor: pointer;
+    }
+    
+    .hamburger{
+        display: block;
+        cursor: pointer;
+
+    }
+
+    .toggle .line:nth-child(2){
+        opacity: 0;
+    }
+
+    .toggle .line:nth-child(1){
+        transform: rotate(-45deg) translate(-5px,6px);
+        transition: all 0.3s ease;
+    }
+
+    .toggle .line:nth-child(3){
+        transform: rotate(45deg) translate(-5px,-6px);
+        transition: all 0.3s ease;
+    }
+
+
+     /* hero section */
+
+     .portfolio-hero{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        min-height: 40vh;
+    }
+
+    .portfolio-hero h1{
+        font-size: 28px;
+        font-weight: bold;
+        font-family: 'Oswald', sans-serif;
+        padding-bottom: 20px;
+        letter-spacing: 5px;
+    }
+
+    .portfolio-hero h3{
+        font-size: 20px;
+        font-weight: bold;
+        font-family: 'Oswald', sans-serif;
+        padding-bottom: 20px;
+        letter-spacing: 3px;
+    }
+
+    /* Projects nav */
+
+    .project-nav{
+        display: grid;
+        grid-template-columns: repeat(6, 1fr);
+        overflow-x: scroll;
+        scroll-snap-type: x mandatory;
+        scroll-padding-bottom: 30px;
+        gap: 20px;
+        background-color: var(--light-gray--);
+        border: 1px solid var(--dark-gray--);
+    }
+
+    .project-nav button{
+        width: 180px;
+        border: none;
+        outline: none;
+        padding: 15px 30px;
+        font-weight: bold;
+        cursor: pointer;
+        background: none;
+        cursor: pointer;
+        scroll-snap-align: start;
+    }
+
+    
+
+    .project-tabs{
+        background-color: var(--light-gray--);
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding: 50px 0px;
+    }
+
+    button.tab-active{
+        color: var(--hero-nav-text-color--);
+        background-color: var(--hero-nav-color--);
+    }
+
+     .tabs-main .project-tabs{
+        display: none;
+        
+    }
+
+    .project-tabs-content{
+        display: grid;
+        grid-template-columns: 1fr;
+        padding: 0px;
+    }
+
+    .tabs-main .project-tabs.content-active{
+        display: block;
+  
+    }
+
+    .project-tabs h2{
+        font-size: 24px;
+        line-height: 35px;
+
+    }
+
+    .first-card{
+        width: 300px;
+        height: 400px;
+        box-shadow: 2px 4px 4px rgba(0, 0, 0, 0.2);
+        background: linear-gradient(135deg, rgba(255, 255, 255, 0.308), rgba(12, 58, 74, 0.582));
+        backdrop-filter: blur(10px);
+        border-radius: 10px;
+        padding: 25px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    .card-img{
+        width: 100%;
+        height: 250px;
+        background: #FFA500;
+        background: url(asset/images/devon-janse-van-rensburg-DU8Z5djVJtg-unsplash.jpg) no-repeat;
+        background-size: cover;
+        background-position: center;
+        border-radius: 10px;
+        padding: 30px;
+        object-fit: cover;
+    }
+
+
+    .first-card-img-1{
+        width: 100%;
+        height: 250px;
+        background: url(asset/images/office-sec-3.jpg) no-repeat;
+        background-size: cover;
+        background-position: center;
+        border-radius: 10px;
+        padding: 30px;
+        object-fit: cover;
+    }
+
+     .first-card-img-2{
+        width: 100%;
+        height: 250px;
+        background: url(asset/images/dinning-room-1.jpg) no-repeat;
+        background-size: cover;
+        background-position: center;
+        border-radius: 10px;
+        padding: 30px;
+        object-fit: cover;
+    }
+
+     .first-card-img-3{
+        width: 100%;
+        height: 250px;
+        background: url(asset/images/office-1.jpg) no-repeat;
+        background-size: cover;
+        background-position: center;
+        border-radius: 10px;
+        padding: 30px;
+        object-fit: cover;
+    }
+
+    .first-card-img-4{
+        width: 100%;
+        height: 250px;
+        background: url(asset/images/living-room-2.jpg) no-repeat;
+        background-size: cover;
+        background-position: center;
+        border-radius: 10px;
+        padding: 30px;
+        object-fit: cover;
+    }
+
+    /* living section */
+
+    .living-card-1{
+        width: 100%;
+        height: 250px;
+        background: url(asset/images/living-room-1.jpg) no-repeat;
+        background-size: cover;
+        background-position: center;
+        border-radius: 10px;
+        padding: 30px;
+        object-fit: cover;
+    }
+
+    .living-card-2{
+        width: 100%;
+        height: 250px;
+        background: url(asset/images/living-room-2.jpg) no-repeat;
+        background-size: cover;
+        background-position: center;
+        border-radius: 10px;
+        padding: 30px;
+        object-fit: cover;
+    }
+
+    .living-card-3{
+        width: 100%;
+        height: 250px;
+        background: url(asset/images/main-tab-living.jpg) no-repeat;
+        background-size: cover;
+        background-position: center;
+        border-radius: 10px;
+        padding: 30px;
+        object-fit: cover;
+    }
+
+    .living-card-4{
+        width: 100%;
+        height: 250px;
+        background: url(asset/images/main-tab-living.jpg) no-repeat;
+        background-size: cover;
+        background-position: center;
+        border-radius: 10px;
+        padding: 30px;
+        object-fit: cover;
+    }
+
+    .living-card-5{
+        width: 100%;
+        height: 250px;
+        background: url(asset/images/living-room-2.jpg) no-repeat;
+        background-size: cover;
+        background-position: center;
+        border-radius: 10px;
+        padding: 30px;
+        object-fit: cover;
+    }
+
+    .living-card-6{
+        width: 100%;
+        height: 250px;
+        background: url(asset/images/living-room-1.jpg) no-repeat;
+        background-size: cover;
+        background-position: center;
+        border-radius: 10px;
+        padding: 30px;
+        object-fit: cover;
+    }
+    
+    
+
+    .first-card h3{
+        font-size: 20px;
+        color:var(--hero-nav-color--);
+        padding-top: 10px;
+        padding-bottom: 10px;
+    }
+
+    .first-card p{
+        font-size: 15px;
+  
+    }
+
+    .project-tabs-content{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        row-gap: 40px;
+        padding: 40px 20px;
+    }
+
+    .load-btn{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .load-btn .js-load-more{
+        border: none;
+        outline: none;
+        border-radius: 10px;
+        font-weight: bold;
+        padding: 15px 20px;
+        background-color: var(--nav-btn-color--);
+        color: var(--hero-nav-text-color--);
+        cursor: pointer;
+        transition: all 0.3s ease;
+    }
+
+    .js-load-content{
+        display: none;
+        
+    }
+
+    .load-btn .js-load-more:hover{
+        background-color: var(--dark-gray--);
+    }
+
+    .js-show-less{
+        border: none;
+        outline: none;
+        border-radius: 10px;
+        font-weight: bold;
+        padding: 15px 20px;
+        background-color: var(--dark-gray--);
+        color: var(--hero-nav-text-color--);
+        cursor: pointer;
+        transition: all 0.3s ease;
+        display: none;
+    }
+
+    /* Banner section */
+
+    .banner{
+        margin: 0px;
+        padding: 50px 0px;
+    }
+
+    .banner .banner-content{
+        border-radius: 50px;
+        height: 60vh;
+        background: url(asset/images/living-room-1.jpg) no-repeat;
+        background-position: center;
+        background-size: cover;
+        
+    }
+
+    .for-larger-screens{
+        display: none;
+    }
+
+    .banner .banner-content h2{
+        font-size: 18px;
+        color: var(--hero-nav-text-color--);
+    }
+
+    .banner-bgcolor{
+        background:rgba(12, 58, 74, 0.582);
+        backdrop-filter: blur(10px);
+        width: 100%;
+        height: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        border-radius: 50px;
+    }
+
+    /* Contact section */
+
+    .contact-portfolio{
+        background-color: var(--hero-nav-color--);
+        padding: 40px 20px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+
+    }
+
+    .contact-container{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-between;
+        gap: 30px;
+    }
+
+    .contact-first-content{
+        flex: 1;
+    }
+
+    .contact-first-content h3{
+        font-weight: bold;
+        font-size: 20px;
+        color: var(--dark-gray--);
+    }
+
+    .contact-first-content h2{
+        font-weight: bold;
+        font-size: 28px;
+        color: var(--hero-nav-text-color--);
+        padding-top: 10px;
+    }
+
+    .contact-first-content .contact-details{
+        display: flex;
+        flex-direction: column;
+        padding-top: 20px;
+        gap: 20px;
+    }
+
+    .contact-first-content .contact-details h4{
+        font-weight: bold;
+        font-size: 18px;
+        color: var(--dark-gray--);
+    }
+
+    .contact-first-content .contact-details h4 .fa-circle{
+        color: var(--nav-btn-color--);
+        font-size: 15px;
+    }
+
+    .contact-second-content{
+        flex: 1;
+    }
+
+    .contact-second-content form{
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .contact-second-content form input{
+        outline: none;
+        border: 1px solid var(--dark-gray--);
+        border-radius: 10px;
+        padding: 15px;
+
+    }
+
+    
+
+    .contact-second-content form #portfolio-message{
+        height: 100px;
+        outline: none;
+        border: none;
+        border-radius: 10px;
+        padding: 15px;
+
+    }
+
+    .contact-second-content form input:focus{
+        outline: none;
+        border: 1px solid var(--nav-btn-color--);
+
+    }
+
+    .contact-second-content form button{
+        outline: none;
+        border: 1px solid var(--nav-btn-color--);
+        border-radius: 10px;
+        padding: 15px;
+        background: none;
+        color: var(--nav-btn-color--);
+        font-size: 15px;
+        font-weight: bold;
+        letter-spacing: 2px;
+        cursor: pointer;
+        transition: all 0.3s ease-in-out;
+
+    }
+
+    .contact-second-content form button:hover{
+        background: var(--hero-nav-text-color--);
+        border: none;
+        color: var(--body-text-color--);
+
+
+    }
+
+
+    /* footer section */
+
+     footer{
+        background-color: var(--hero-nav-color--);
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        position: relative;
+    }
+
+    .footer-content{
+        display: flex;
+        flex-direction: column;
+        padding: 90px 20px;
+        margin-bottom: 40px;
+        gap: 30px;
+    }
+
+    .footer-content .logo-items p{
+        font-size: 20px;
+        color: var(--hero-nav-text-color--);
+        padding-top: 15px;
+    }
+
+    .footer-content .logo-items h4{
+        font-size: 20px;
+        color: var(--hero-nav-text-color--);
+        padding-top: 15px;
+    }
+
+    .footer-content .logo-items h4 i{
+        padding-right: 10px;
+        color: var(--nav-btn-color--);
+    }
+
+    footer h3{
+        font-size: 20px;
+        color: var(--hero-nav-text-color--);
+        padding-bottom: 20px;
+    }
+
+    footer h5{
+        padding-bottom: 15px;
+    }
+
+    footer h5 a{
+        font-size: 16px;
+        color: var(--hero-nav-text-color--);
+        padding-bottom: 20px;
+        cursor: pointer;
+        transition: all 0.3s ease-in-out;
+    }
+
+    footer h5 a:hover{
+        color: var(--nav-btn-color--);
+    }
+
+    footer h5 a i{
+        padding-right: 10px;
+    }
+
+    .copy-rights{
+        color: var(--hero-nav-text-color--);
+        position: absolute;
+        bottom: 0;
+        width: 100%;
+        text-align: center;
+        padding: 20px 0px;
+    }
+
+
+}
+

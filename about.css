@@ -1,0 +1,1685 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style-type: none;
+}
+
+:root {
+
+
+    /* Fonts */
+
+    --nav-logo-font-faminly--:'Montserrat', sans-serif;
+    --hero-font-family--:'Oswald', sans-serif;
+    --hero2-font-family--: 'Raleway', sans-serif;
+    --body-font-family--:'Lato', sans-serif;
+
+
+    /* colors */
+
+    --hero-nav-color--: rgb(12, 58, 74);
+    --hero-nav-text-color--: #ffffff;
+    --nav-btn-color--: #FFA500;
+    --body-background--: #ffffff;
+    --body-text-color--: #333333;
+    --dark-gray--:#CCCCCC;
+    --light-gray--:#F5F5F5;
+}
+
+body{
+    font-family: var(--body-font-family--);
+    color: var(--body-text-color--);
+    background: var(--body-background--);
+    scroll-behavior: smooth;
+}
+
+.hamburger{
+    display: none;
+    cursor: pointer;
+}
+
+.hamburger .line{
+    width: 35px;
+    height: 3px;
+    margin: 5px;
+    background-color: var(--hero-nav-text-color--);
+}
+
+
+
+/* Styles for screens 1200px and above (e.g., desktops) */
+@media only screen and (min-width: 1200px){
+
+    .for-mobile-screen{
+        display: none;
+    }
+
+    header{
+        background-color: var(--hero-nav-color--);
+        position: sticky;
+        top: 0;
+        z-index: 2;
+
+    }
+
+    nav{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        margin: 0px 80px;
+        padding-top: 30px;
+        padding-bottom: 30px;
+    }
+
+    .nav-logo{
+        color: var(--hero-nav-text-color--);
+        font-family: var(--nav-logo-font-faminly--);
+        font-size: 30px;
+        font-weight: bold;
+        letter-spacing: 3px;
+    }
+
+    .nav-logo span{
+        color: var(--nav-btn-color--);
+    }
+
+    nav .nav-items{
+        display: flex;
+        gap: 30px;
+        align-items: center;
+    }
+
+    nav .nav-items a{
+        font-weight: bold;
+        font-size: 18px;
+        color: var(--hero-nav-text-color--);
+        font-family: var(--nav-logo-font-faminly--);
+        position: relative;
+    }
+
+    /* Hover state */
+  nav .nav-items a:hover {
+    color: var(--nav-btn-color--);
+  }
+  
+  /* Active state */
+  nav .nav-items a.active {
+    color: white;
+  }
+  
+  /* Add :before and :after pseudo-elements */
+  nav .nav-items a:before,
+  nav .nav-items a:after {
+    content: "";
+    position: absolute;
+    height: 2px;
+    width: 0;
+    background-color: var(--nav-btn-color--);
+    bottom: -2px;
+    transition: width 0.2s ease;
+  }
+  
+  /* Style :before for active and hover state */
+  nav .nav-items a.active:before,
+  nav .nav-items a:hover:before {
+    width: 100%;
+    
+  }
+
+    nav .nav-btn{
+        border: none;
+        outline: none;
+        color: var(--hero-nav-text-color--);
+        background-color: var(--nav-btn-color--);
+        border-radius: 10px;
+        padding: 10px 15px;
+        font-size: 18px;
+        font-weight: bold;
+        font-family: var(--nav-logo-font-faminly--);
+        cursor: pointer;
+    }
+
+    nav .nav-btn:hover{
+        background-color: transparent;
+        border: 1px solid var(--nav-btn-color--);
+    }
+
+    nav .nav-btn a{
+        color: var(--hero-nav-text-color--);
+        font-size: 18px;
+        font-weight: bold;
+        font-family: var(--nav-logo-font-faminly--);
+        cursor: pointer;
+    }
+
+    
+
+    /* hero section */
+
+    .interior-hero{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        min-height: 50vh;
+    }
+
+    .interior-hero h1{
+        font-size: 40px;
+        font-weight: bold;
+        font-family: 'Oswald', sans-serif;
+        padding-bottom: 20px;
+        letter-spacing: 5px;
+    }
+
+    .interior-hero h3{
+        font-size: 20px;
+        font-weight: bold;
+        font-family: 'Oswald', sans-serif;
+        padding-bottom: 20px;
+        letter-spacing: 3px;
+    }
+
+    /* Interior section */
+    .interior{
+
+        padding: 40px 80px;
+    }
+
+    .interior .interior-story-contain{
+
+        display: grid;
+        grid-template-columns: repeat(2,1fr);
+    }
+
+    .interior .interior-story-contain .story-img{
+
+        height: 400px;
+        background: url(asset/images/dan-gold-4HG3Ca3EzWw-unsplash.jpg) no-repeat;
+        background-position: center;
+        background-size: cover;
+        border-radius: 10px;
+    }
+
+    .interior .interior-story-contain .story-txt{
+
+        height: 400px;
+        padding: 25px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    .interior .interior-story-contain .story-txt h2{
+
+        padding-bottom: 20px;
+        letter-spacing: 2px;
+        text-transform: uppercase;
+        font-size: 20px;
+    }
+
+    .interior .interior-story-contain .story-txt p{
+
+        line-height: 25px;
+
+    }
+
+    .interior .interior-story-contain .story-txt p span{
+
+        background-color: var(--nav-btn-color--);
+        cursor: pointer;
+    }
+
+    .interior .interior-story-contain .philo-img{
+
+        background: url(asset/images/devon-janse-van-rensburg-DU8Z5djVJtg-unsplash.jpg) no-repeat;
+        background-position: center;
+        background-size: cover;
+    }
+
+     /* Interior / Why us*/
+    
+     .why-interior{
+        height: auto;
+        padding-top: 45px;
+        padding-bottom: 45px;
+    }
+
+    .why-interior h2{
+        font-size: 36px;
+        font-family: var(--body-font-family--);
+        font-weight: bold;
+        color: var(--body-text-color--);
+        padding-top: 40px;
+        padding-bottom: 40px;
+        text-align: center;
+    }
+
+    .why-us-interior-container{
+        display: flex;
+        align-items: center;
+        justify-content:space-between;
+        padding-top: 50px;
+        padding-bottom: 25px;
+        margin-left: 80px;
+        margin-right: 80px;
+        gap: 35px;
+    }
+
+    .why-us-item{
+        text-align: center;
+        flex: 1;
+    }
+
+    .why-us-item img{
+        width: 50px;
+        padding-bottom: 10px;
+    }
+
+    .why-us-item h3{
+        font-size: 22px;
+        padding-bottom: 10px;
+    }
+
+    .why-us-item p{
+        font-size: 16px;
+    }
+
+    /* Commitment*/
+
+    .commitment{
+        padding: 40px 80px;
+        background-color: var(--hero-nav-color--);
+        color: var(--hero-nav-text-color--);
+    }
+
+    .commitment .commitment-contain{
+
+        display: grid;
+        grid-template-columns: repeat(2,1fr);
+    }
+
+    .commitment .commitment-contain .commitment-img{
+
+        height: 400px;
+        background: url(asset/images/dan-gold-4HG3Ca3EzWw-unsplash.jpg) no-repeat;
+        background-position: center;
+        background-size: cover;
+        border-radius: 10px;
+    }
+
+    .commitment .commitment-contain .commitment-item{
+
+        height: 400px;
+        padding: 25px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    .commitment .commitment-contain .commitment-item h2{
+
+        padding-bottom: 20px;
+        letter-spacing: 2px;
+        text-transform: uppercase;
+        font-size: 20px;
+    }
+
+    .commitment .commitment-contain .commitment-item p{
+
+        line-height: 25px;
+
+    }
+
+    .commitment .commitment-contain .commitment-item .commitment-btn{
+
+        padding: 15px 20px;
+        color: var(--hero-nav-text-color--);
+        background: var(--nav-btn-color--);
+        border-radius: 10px;
+        width: 120px;
+        margin-top: 20px;
+        cursor: pointer;
+        font-weight: bold;
+        transition: all 0.3s ease-in-out;
+
+    }
+
+    .commitment .commitment-contain .commitment-item .commitment-btn:hover{
+
+        color: #333333;
+        background-color: var(--hero-nav-text-color--);
+
+    }
+
+    /* footer section */
+
+    footer{
+        background-color: var(--hero-nav-color--);
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        position: relative;
+    }
+
+    .footer-content{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 90px 80px;
+        margin-bottom: 40px;
+    }
+
+    .footer-content .logo-items p{
+        font-size: 24px;
+        color: var(--hero-nav-text-color--);
+        padding-top: 15px;
+    }
+
+    .footer-content .logo-items h4{
+        font-size: 25px;
+        color: var(--hero-nav-text-color--);
+        padding-top: 15px;
+    }
+
+    .footer-content .logo-items h4 i{
+        padding-right: 10px;
+        color: var(--nav-btn-color--);
+    }
+
+    footer h3{
+        font-size: 20px;
+        color: var(--hero-nav-text-color--);
+        padding-bottom: 20px;
+    }
+
+    footer h5{
+        padding-bottom: 15px;
+    }
+
+    footer h5 a{
+        font-size: 16px;
+        color: var(--hero-nav-text-color--);
+        padding-bottom: 20px;
+        cursor: pointer;
+        transition: all 0.3s ease-in-out;
+    }
+
+    footer h5 a:hover{
+        color: var(--nav-btn-color--);
+    }
+
+    footer h5 a i{
+        padding-right: 10px;
+    }
+
+    .copy-rights{
+        color: var(--hero-nav-text-color--);
+        position: absolute;
+        bottom: 0;
+        width: 100%;
+        text-align: center;
+        padding: 20px 0px;
+    }
+
+    .slide-in {
+        opacity: 0;
+        transform: translateY(50px); /* Start the element 50px below its original position */
+        transition: opacity 0.5s ease, transform 0.5s ease;
+    }
+
+    .slide-in.active {
+        opacity: 1;
+        transform: translateY(0); /* Slide the element back to its original position */
+    }
+
+    
+    
+    
+
+
+}
+
+
+/* Styles for screens between 992px and 1199px (e.g., laptops) */
+@media only screen and (min-width: 992px) and (max-width: 1199px){
+
+
+    
+    .for-mobile-screen{
+        display: none;
+    }
+
+    header{
+        background-color: var(--hero-nav-color--);
+        position: sticky;
+        top: 0;
+        z-index: 2;
+
+    }
+
+    nav{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        margin: 0px 40px;
+        padding-top: 30px;
+        padding-bottom: 30px;
+    }
+
+    .nav-logo{
+        color: var(--hero-nav-text-color--);
+        font-family: var(--nav-logo-font-faminly--);
+        font-size: 30px;
+        font-weight: bold;
+        letter-spacing: 3px;
+    }
+
+    .nav-logo span{
+        color: var(--nav-btn-color--);
+    }
+
+    nav .nav-items{
+        display: flex;
+        gap: 30px;
+        align-items: center;
+    }
+
+    nav .nav-items a{
+        font-weight: bold;
+        font-size: 18px;
+        color: var(--hero-nav-text-color--);
+        font-family: var(--nav-logo-font-faminly--);
+        position: relative;
+    }
+
+    /* Hover state */
+  nav .nav-items a:hover {
+    color: var(--nav-btn-color--);
+  }
+  
+  /* Active state */
+  nav .nav-items a.active {
+    color: white;
+  }
+  
+  /* Add :before and :after pseudo-elements */
+  nav .nav-items a:before,
+  nav .nav-items a:after {
+    content: "";
+    position: absolute;
+    height: 2px;
+    width: 0;
+    background-color: var(--nav-btn-color--);
+    bottom: -2px;
+    transition: width 0.2s ease;
+  }
+  
+  /* Style :before for active and hover state */
+  nav .nav-items a.active:before,
+  nav .nav-items a:hover:before {
+    width: 100%;
+    
+  }
+
+    nav .nav-btn{
+        border: none;
+        outline: none;
+        color: var(--hero-nav-text-color--);
+        background-color: var(--nav-btn-color--);
+        border-radius: 10px;
+        padding: 10px 15px;
+        font-size: 18px;
+        font-weight: bold;
+        font-family: var(--nav-logo-font-faminly--);
+        cursor: pointer;
+    }
+
+    nav .nav-btn:hover{
+        background-color: transparent;
+        border: 1px solid var(--nav-btn-color--);
+    }
+
+    nav .nav-btn a{
+        color: var(--hero-nav-text-color--);
+        font-size: 18px;
+        font-weight: bold;
+        font-family: var(--nav-logo-font-faminly--);
+        cursor: pointer;
+    }
+
+    
+
+    /* hero section */
+
+    .interior-hero{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        min-height: 50vh;
+    }
+
+    .interior-hero h1{
+        font-size: 40px;
+        font-weight: bold;
+        font-family: 'Oswald', sans-serif;
+        padding-bottom: 20px;
+        letter-spacing: 5px;
+    }
+
+    .interior-hero h3{
+        font-size: 20px;
+        font-weight: bold;
+        font-family: 'Oswald', sans-serif;
+        padding-bottom: 20px;
+        letter-spacing: 3px;
+    }
+
+    /* Interior section */
+    .interior{
+
+        padding: 40px 40px;
+    }
+
+    .interior .interior-story-contain{
+
+        display: grid;
+        grid-template-columns: repeat(2,1fr);
+    }
+
+    .interior .interior-story-contain .story-img{
+
+        height: 400px;
+        background: url(asset/images/dan-gold-4HG3Ca3EzWw-unsplash.jpg) no-repeat;
+        background-position: center;
+        background-size: cover;
+        border-radius: 10px;
+    }
+
+    .interior .interior-story-contain .story-txt{
+
+        height: 400px;
+        padding: 25px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    .interior .interior-story-contain .story-txt h2{
+
+        padding-bottom: 20px;
+        letter-spacing: 2px;
+        text-transform: uppercase;
+        font-size: 20px;
+    }
+
+    .interior .interior-story-contain .story-txt p{
+
+        line-height: 25px;
+
+    }
+
+    .interior .interior-story-contain .story-txt p span{
+
+        background-color: var(--nav-btn-color--);
+        cursor: pointer;
+    }
+
+    .interior .interior-story-contain .philo-img{
+
+        background: url(asset/images/devon-janse-van-rensburg-DU8Z5djVJtg-unsplash.jpg) no-repeat;
+        background-position: center;
+        background-size: cover;
+    }
+
+     /* Interior / Why us*/
+    
+     .why-interior{
+        height: auto;
+        padding-top: 45px;
+        padding-bottom: 45px;
+    }
+
+    .why-interior h2{
+        font-size: 36px;
+        font-family: var(--body-font-family--);
+        font-weight: bold;
+        color: var(--body-text-color--);
+        padding-top: 40px;
+        padding-bottom: 40px;
+        text-align: center;
+    }
+
+
+
+    .why-us-interior-container{
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        padding-top: 50px;
+        padding-bottom: 25px;
+        gap: 35px;
+    }
+
+    .why-us-item{
+        text-align: center;
+        flex: 1;
+    }
+
+    .why-us-item img{
+        width: 50px;
+        padding-bottom: 10px;
+    }
+
+    .why-us-item h3{
+        font-size: 22px;
+        padding-bottom: 10px;
+    }
+
+    .why-us-item p{
+        font-size: 16px;
+    }
+
+    /* Commitment*/
+
+    .commitment{
+        padding: 40px 80px;
+        background-color: var(--hero-nav-color--);
+        color: var(--hero-nav-text-color--);
+    }
+
+    .commitment .commitment-contain{
+
+        display: grid;
+        grid-template-columns: repeat(2,1fr);
+    }
+
+    .commitment .commitment-contain .commitment-img{
+
+        height: 400px;
+        background: url(asset/images/dan-gold-4HG3Ca3EzWw-unsplash.jpg) no-repeat;
+        background-position: center;
+        background-size: cover;
+        border-radius: 10px;
+    }
+
+    .commitment .commitment-contain .commitment-item{
+
+        height: 400px;
+        padding: 25px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    .commitment .commitment-contain .commitment-item h2{
+
+        padding-bottom: 20px;
+        letter-spacing: 2px;
+        text-transform: uppercase;
+        font-size: 20px;
+    }
+
+    .commitment .commitment-contain .commitment-item p{
+
+        line-height: 25px;
+
+    }
+
+    .commitment .commitment-contain .commitment-item .commitment-btn{
+
+        padding: 15px 20px;
+        color: var(--hero-nav-text-color--);
+        background: var(--nav-btn-color--);
+        border-radius: 10px;
+        width: 120px;
+        margin-top: 20px;
+        cursor: pointer;
+        font-weight: bold;
+        transition: all 0.3s ease-in-out;
+
+    }
+
+    .commitment .commitment-contain .commitment-item .commitment-btn:hover{
+
+        color: #333333;
+        background-color: var(--hero-nav-text-color--);
+
+    }
+
+    /* footer section */
+
+    footer{
+        background-color: var(--hero-nav-color--);
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        position: relative;
+    }
+
+    .footer-content{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 90px 80px;
+        margin-bottom: 40px;
+    }
+
+    .footer-content .logo-items p{
+        font-size: 24px;
+        color: var(--hero-nav-text-color--);
+        padding-top: 15px;
+    }
+
+    .footer-content .logo-items h4{
+        font-size: 25px;
+        color: var(--hero-nav-text-color--);
+        padding-top: 15px;
+    }
+
+    .footer-content .logo-items h4 i{
+        padding-right: 10px;
+        color: var(--nav-btn-color--);
+    }
+
+    footer h3{
+        font-size: 20px;
+        color: var(--hero-nav-text-color--);
+        padding-bottom: 20px;
+    }
+
+    footer h5{
+        padding-bottom: 15px;
+    }
+
+    footer h5 a{
+        font-size: 16px;
+        color: var(--hero-nav-text-color--);
+        padding-bottom: 20px;
+        cursor: pointer;
+        transition: all 0.3s ease-in-out;
+    }
+
+    footer h5 a:hover{
+        color: var(--nav-btn-color--);
+    }
+
+    footer h5 a i{
+        padding-right: 10px;
+    }
+
+    .copy-rights{
+        color: var(--hero-nav-text-color--);
+        position: absolute;
+        bottom: 0;
+        width: 100%;
+        text-align: center;
+        padding: 20px 0px;
+    }
+
+    .slide-in {
+        opacity: 0;
+        transform: translateY(50px); /* Start the element 50px below its original position */
+        transition: opacity 0.5s ease, transform 0.5s ease;
+    }
+
+    .slide-in.active {
+        opacity: 1;
+        transform: translateY(0); /* Slide the element back to its original position */
+    }
+
+
+}
+
+/* Styles for screens between 768px and 991px (e.g., tablets) */
+@media only screen and (min-width: 768px) and (max-width: 991px){
+
+    header{
+        background-color: var(--hero-nav-color--);
+        position: sticky;
+        top: 0;
+        z-index: 2;
+    
+    }
+    
+    nav{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        margin: 0px 25px;
+        padding-top: 25px;
+        padding-bottom: 25px;
+    }
+    
+    .nav-logo{
+        color: var(--hero-nav-text-color--);
+        font-family: var(--nav-logo-font-faminly--);
+        font-size: 27px;
+        font-weight: bold;
+        letter-spacing: 3px;
+    }
+    
+    .nav-logo span{
+        color: var(--nav-btn-color--);
+    }
+    
+    nav .nav-items{
+        display: flex;
+        flex-direction: column;
+        gap: 50px;
+        align-items: center;
+        justify-content: center;
+        position: absolute;
+        width: 100vw;
+        height: 0;
+        opacity: 0;
+        background-color: var(--hero-nav-color--);
+        right: 0;
+        left: 0;
+        top: 8vh;
+        transition:all 0.3s ease;
+        overflow: hidden;
+    }
+
+
+    .nav-items.nav-trigger{
+        opacity: 1;
+        height: 100vh;
+    }
+    
+    nav .nav-items a{
+        font-weight: bold;
+        font-size: 25px;
+        color: var(--hero-nav-text-color--);
+        font-family: var(--nav-logo-font-faminly--);
+        position: relative;
+    }
+    
+    /* Hover state */
+    nav .nav-items a:hover {
+    color: var(--nav-btn-color--);
+    }
+    
+    /* Active state */
+    nav .nav-items a.active {
+    color: white;
+    }
+    
+    /* Add :before and :after pseudo-elements */
+    nav .nav-items a:before,
+    nav .nav-items a:after {
+    content: "";
+    position: absolute;
+    height: 2px;
+    width: 0;
+    background-color: var(--nav-btn-color--);
+    bottom: -2px;
+    transition: width 0.2s ease;
+    }
+    
+    /* Style :before for active and hover state */
+    nav .nav-items a.active:before,
+    nav .nav-items a:hover:before {
+    width: 100%;
+    
+    }
+    
+    
+    
+    nav .nav-btn{
+        border: none;
+        outline: none;
+        color: var(--hero-nav-text-color--);
+        background-color: var(--nav-btn-color--);
+        border-radius: 10px;
+        padding: 10px 15px;
+        font-weight: bold;
+        font-family: var(--nav-logo-font-faminly--);
+        cursor: pointer;
+        transition: All 0.3s ease-in-out;
+    }
+    
+    nav .nav-btn:hover{
+        background-color: transparent;
+        border: 1px solid var(--nav-btn-color--);
+    }
+    
+    nav .nav-btn a{
+        color: var(--hero-nav-text-color--);
+        font-size: 20px;
+        font-weight: bold;
+        font-family: var(--nav-logo-font-faminly--);
+        cursor: pointer;
+    }
+    
+    .hamburger{
+        display: block;
+        cursor: pointer;
+
+    }
+
+    
+
+    .toggle .line:nth-child(2){
+        opacity: 0;
+    }
+
+    .toggle .line:nth-child(1){
+        transform: rotate(-45deg) translate(-5px,6px);
+        transition: all 0.3s ease;
+    }
+
+    .toggle .line:nth-child(3){
+        transform: rotate(45deg) translate(-5px,-6px);
+        transition: all 0.3s ease;
+    }
+
+
+         /* hero section */
+
+         .interior-hero{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            min-height: 30vh;
+        }
+    
+        .interior-hero h1{
+            font-size: 30px;
+            font-weight: bold;
+            font-family: 'Oswald', sans-serif;
+            padding-bottom: 20px;
+            letter-spacing: 5px;
+            text-align: center;
+        }
+    
+        .interior-hero h3{
+            font-size: 20px;
+            font-weight: bold;
+            font-family: 'Oswald', sans-serif;
+            padding-bottom: 20px;
+            letter-spacing: 3px;
+            text-align: center;
+        }
+    
+        /* Interior section */
+        .interior{
+    
+            padding: 40px 20px;
+        }
+    
+        .interior-story-contain{
+            display: flex;
+            flex-direction: column;
+            
+        }
+        .interior .interior-story-contain .story-img{
+    
+            height: 400px;
+            background: url(asset/images/dan-gold-4HG3Ca3EzWw-unsplash.jpg) no-repeat;
+            background-position: center;
+            background-size: cover;
+            border-radius: 10px;
+        }
+    
+        .interior .interior-story-contain .story-txt{
+    
+            height: 400px;
+            padding: 25px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+    
+        .interior .interior-story-contain .story-txt h2{
+    
+            padding-bottom: 20px;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            font-size: 20px;
+        }
+    
+        .interior .interior-story-contain .story-txt p{
+    
+            line-height: 25px;
+    
+        }
+    
+        .interior .interior-story-contain .story-txt p span{
+    
+            background-color: var(--nav-btn-color--);
+            cursor: pointer;
+        }
+    
+        .interior .interior-story-contain .philo-img{
+    
+            background: url(asset/images/devon-janse-van-rensburg-DU8Z5djVJtg-unsplash.jpg) no-repeat;
+            background-position: center;
+            background-size: cover;
+            margin-top: 40px;
+        }
+    
+         /* Interior / Why us*/
+        
+         .why-interior{
+            height: auto;
+            padding-top: 45px;
+            padding-bottom: 45px;
+        }
+    
+        .why-interior h2{
+            font-size: 25px;
+            font-family: var(--body-font-family--);
+            font-weight: bold;
+            color: var(--body-text-color--);
+            padding-top: 40px;
+            padding-bottom: 40px;
+            text-align: center;
+        }
+    
+        .why-us-interior-container{
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            padding-bottom: 20px;
+            padding-top: 15px;
+            overflow-x: scroll;
+            scroll-snap-type: x mandatory;
+            gap: 20px;
+        }
+    
+        .why-us-item{
+            width: 300px;
+            height: auto;
+            padding: 20px;
+            border-radius: 10px;
+            cursor: pointer;
+            scroll-snap-align: start;
+        }
+    
+        .why-us-item img{
+            width: 50px;
+            padding-bottom: 10px;
+        }
+    
+        .why-us-item h3{
+            font-size: 22px;
+            padding-bottom: 10px;
+        }
+    
+        .why-us-item p{
+            font-size: 16px;
+        }
+
+
+         /* Commitment*/
+
+    .commitment{
+        padding: 40px 20px;
+        background-color: var(--hero-nav-color--);
+        color: var(--hero-nav-text-color--);
+    }
+
+    .commitment .commitment-contain{
+
+        display: grid;
+        grid-template-columns: 1fr;
+    }
+
+    .commitment .commitment-contain .commitment-img{
+
+        height: 400px;
+        background: url(asset/images/dan-gold-4HG3Ca3EzWw-unsplash.jpg) no-repeat;
+        background-position: center;
+        background-size: cover;
+        border-radius: 10px;
+    }
+
+    .commitment .commitment-contain .commitment-item{
+
+        height: 400px;
+        padding: 25px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    .commitment .commitment-contain .commitment-item h2{
+
+        padding-bottom: 20px;
+        letter-spacing: 2px;
+        text-transform: uppercase;
+        font-size: 20px;
+    }
+
+    .commitment .commitment-contain .commitment-item p{
+
+        line-height: 25px;
+
+    }
+
+    .commitment .commitment-contain .commitment-item .commitment-btn{
+
+        padding: 15px 20px;
+        color: var(--hero-nav-text-color--);
+        background: var(--nav-btn-color--);
+        border-radius: 10px;
+        width: 120px;
+        margin-top: 20px;
+        cursor: pointer;
+        font-weight: bold;
+        transition: all 0.3s ease-in-out;
+
+    }
+
+    .commitment .commitment-contain .commitment-item .commitment-btn:hover{
+
+        color: #333333;
+        background-color: var(--hero-nav-text-color--);
+
+    }
+
+
+
+
+     /* footer section */
+
+     footer{
+        background-color: var(--hero-nav-color--);
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        position: relative;
+    }
+
+    .footer-content{
+        display: flex;
+        justify-content: space-between;
+        padding: 90px 25px;
+        margin-bottom: 40px;
+    }
+
+    .footer-content .logo-items p{
+        font-size: 20px;
+        color: var(--hero-nav-text-color--);
+        padding-top: 15px;
+    }
+
+    .footer-content .logo-items h4{
+        font-size: 20px;
+        color: var(--hero-nav-text-color--);
+        padding-top: 15px;
+    }
+
+    .footer-content .logo-items h4 i{
+        padding-right: 10px;
+        color: var(--nav-btn-color--);
+    }
+
+    footer h3{
+        font-size: 20px;
+        color: var(--hero-nav-text-color--);
+        padding-bottom: 20px;
+    }
+
+    footer h5{
+        padding-bottom: 15px;
+    }
+
+    footer h5 a{
+        font-size: 16px;
+        color: var(--hero-nav-text-color--);
+        padding-bottom: 20px;
+        cursor: pointer;
+        transition: all 0.3s ease-in-out;
+    }
+
+    footer h5 a:hover{
+        color: var(--nav-btn-color--);
+    }
+
+    footer h5 a i{
+        padding-right: 10px;
+    }
+
+    .copy-rights{
+        color: var(--hero-nav-text-color--);
+        position: absolute;
+        bottom: 0;
+        width: 100%;
+        text-align: center;
+        padding: 20px 0px;
+    }
+}
+
+
+/* Styles for screens smaller than or equal to 767px (e.g., mobile devices) */
+@media only screen and (max-width: 767px){
+
+
+    header{
+        background-color: var(--hero-nav-color--);
+        position: sticky;
+        top: 0;
+        z-index: 2;
+    
+    }
+    
+    nav{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        margin: 0px 20px;
+        padding-top: 25px;
+        padding-bottom: 25px;
+    }
+    
+    .nav-logo{
+        color: var(--hero-nav-text-color--);
+        font-family: var(--nav-logo-font-faminly--);
+        font-size: 18px;
+        font-weight: bold;
+        letter-spacing: 3px;
+    }
+    
+    .nav-logo span{
+        color: var(--nav-btn-color--);
+    }
+    
+    nav .nav-items{
+        display: flex;
+        flex-direction: column;
+        gap: 50px;
+        align-items: center;
+        justify-content: center;
+        position: absolute;
+        width: 100vw;
+        height: 0;
+        opacity: 0;
+        background-color: var(--hero-nav-color--);
+        right: 0;
+        left: 0;
+        top: 11.5vh;
+        transition:all 0.3s ease;
+        overflow: hidden;
+    }
+
+
+    .nav-items.nav-trigger{
+        opacity: 1;
+        height: 100vh;
+    }
+    
+    nav .nav-items a{
+        font-weight: bold;
+        font-size: 18px;
+        color: var(--hero-nav-text-color--);
+        font-family: var(--nav-logo-font-faminly--);
+        position: relative;
+    }
+    
+    /* Hover state */
+    nav .nav-items a:hover {
+    color: var(--nav-btn-color--);
+    }
+    
+    /* Active state */
+    nav .nav-items a.active {
+    color: white;
+    }
+    
+    /* Add :before and :after pseudo-elements */
+    nav .nav-items a:before,
+    nav .nav-items a:after {
+    content: "";
+    position: absolute;
+    height: 2px;
+    width: 0;
+    background-color: var(--nav-btn-color--);
+    bottom: -2px;
+    transition: width 0.2s ease;
+    }
+    
+    /* Style :before for active and hover state */
+    nav .nav-items a.active:before,
+    nav .nav-items a:hover:before {
+    width: 100%;
+    
+    }
+    
+    
+    
+    nav .nav-btn{
+        border: none;
+        outline: none;
+        color: var(--hero-nav-text-color--);
+        background-color: var(--nav-btn-color--);
+        border-radius: 10px;
+        padding: 9px 9px;
+        font-size: 16px;
+        font-weight: bold;
+        font-family: var(--nav-logo-font-faminly--);
+        cursor: pointer;
+        transition: All 0.3s ease-in-out;
+    }
+    
+    nav .nav-btn:hover{
+        background-color: transparent;
+        border: 1px solid var(--nav-btn-color--);
+    }
+    
+    nav .nav-btn a{
+        color: var(--hero-nav-text-color--);
+        font-size: 15px;
+        font-weight: bold;
+        font-family: var(--nav-logo-font-faminly--);
+        cursor: pointer;
+    }
+    
+    .hamburger{
+        display: block;
+        cursor: pointer;
+
+    }
+
+    .toggle .line:nth-child(2){
+        opacity: 0;
+    }
+
+    .toggle .line:nth-child(1){
+        transform: rotate(-45deg) translate(-5px,6px);
+        transition: all 0.3s ease;
+    }
+
+    .toggle .line:nth-child(3){
+        transform: rotate(45deg) translate(-5px,-6px);
+        transition: all 0.3s ease;
+    }
+
+
+
+        /* hero section */
+
+        .interior-hero{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            min-height: 50vh;
+        }
+    
+        .interior-hero h1{
+            font-size: 25px;
+            font-weight: bold;
+            font-family: 'Oswald', sans-serif;
+            padding-bottom: 20px;
+            letter-spacing: 5px;
+            text-align: center;
+        }
+    
+        .interior-hero h3{
+            font-size: 18px;
+            font-weight: bold;
+            font-family: 'Oswald', sans-serif;
+            padding-bottom: 20px;
+            letter-spacing: 3px;
+            text-align: center;
+        }
+    
+        /* Interior section */
+        .interior{
+    
+            padding: 40px 20px;
+        }
+    
+        .interior-story-contain{
+            display: flex;
+            flex-direction: column;
+            
+        }
+        .interior .interior-story-contain .story-img{
+    
+            height: 400px;
+            background: url(asset/images/dan-gold-4HG3Ca3EzWw-unsplash.jpg) no-repeat;
+            background-position: center;
+            background-size: cover;
+            border-radius: 10px;
+        }
+    
+        .interior .interior-story-contain .story-txt{
+    
+            height: 400px;
+            padding: 25px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+    
+        .interior .interior-story-contain .story-txt h2{
+    
+            padding-bottom: 20px;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            font-size: 20px;
+        }
+    
+        .interior .interior-story-contain .story-txt p{
+    
+            line-height: 25px;
+    
+        }
+    
+        .interior .interior-story-contain .story-txt p span{
+    
+            background-color: var(--nav-btn-color--);
+            cursor: pointer;
+        }
+    
+        .interior .interior-story-contain .philo-img{
+    
+            background: url(asset/images/devon-janse-van-rensburg-DU8Z5djVJtg-unsplash.jpg) no-repeat;
+            background-position: center;
+            background-size: cover;
+            margin-top: 40px;
+        }
+    
+         /* Interior / Why us*/
+        
+         .why-interior{
+            height: auto;
+            padding-top: 45px;
+            padding-bottom: 45px;
+        }
+    
+        .why-interior h2{
+            font-size: 25px;
+            font-family: var(--body-font-family--);
+            font-weight: bold;
+            color: var(--body-text-color--);
+            padding-top: 40px;
+            padding-bottom: 40px;
+            text-align: center;
+        }
+    
+        .why-us-interior-container{
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            padding-bottom: 20px;
+            padding-top: 15px;
+            overflow-x: scroll;
+            scroll-snap-type: x mandatory;
+            gap: 20px;
+        }
+    
+        .why-us-item{
+            width: 300px;
+            height: auto;
+            padding: 20px;
+            border-radius: 10px;
+            cursor: pointer;
+            scroll-snap-align: start;
+        }
+    
+        .why-us-item img{
+            width: 50px;
+            padding-bottom: 10px;
+        }
+    
+        .why-us-item h3{
+            font-size: 22px;
+            padding-bottom: 10px;
+        }
+    
+        .why-us-item p{
+            font-size: 16px;
+        }
+
+
+         /* Commitment*/
+
+    .commitment{
+        padding: 40px 20px;
+        background-color: var(--hero-nav-color--);
+        color: var(--hero-nav-text-color--);
+    }
+
+    .commitment .commitment-contain{
+
+        display: grid;
+        grid-template-columns: 1fr;
+    }
+
+    .commitment .commitment-contain .commitment-img{
+
+        height: 400px;
+        background: url(asset/images/dan-gold-4HG3Ca3EzWw-unsplash.jpg) no-repeat;
+        background-position: center;
+        background-size: cover;
+        border-radius: 10px;
+    }
+
+    .commitment .commitment-contain .commitment-item{
+
+        height: 400px;
+        padding: 25px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    .commitment .commitment-contain .commitment-item h2{
+
+        padding-bottom: 20px;
+        letter-spacing: 2px;
+        text-transform: uppercase;
+        font-size: 20px;
+    }
+
+    .commitment .commitment-contain .commitment-item p{
+
+        line-height: 25px;
+
+    }
+
+    .commitment .commitment-contain .commitment-item .commitment-btn{
+
+        padding: 15px 20px;
+        color: var(--hero-nav-text-color--);
+        background: var(--nav-btn-color--);
+        border-radius: 10px;
+        width: 120px;
+        margin-top: 20px;
+        cursor: pointer;
+        font-weight: bold;
+        transition: all 0.3s ease-in-out;
+
+    }
+
+    .commitment .commitment-contain .commitment-item .commitment-btn:hover{
+
+        color: #333333;
+        background-color: var(--hero-nav-text-color--);
+
+    }
+    
+
+
+     /* footer section */
+
+     footer{
+        background-color: var(--hero-nav-color--);
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        position: relative;
+    }
+
+    .footer-content{
+        display: flex;
+        flex-direction: column;
+        padding: 90px 20px;
+        margin-bottom: 40px;
+        gap: 30px;
+    }
+
+    .footer-content .logo-items p{
+        font-size: 20px;
+        color: var(--hero-nav-text-color--);
+        padding-top: 15px;
+    }
+
+    .footer-content .logo-items h4{
+        font-size: 20px;
+        color: var(--hero-nav-text-color--);
+        padding-top: 15px;
+    }
+
+    .footer-content .logo-items h4 i{
+        padding-right: 10px;
+        color: var(--nav-btn-color--);
+    }
+
+    footer h3{
+        font-size: 20px;
+        color: var(--hero-nav-text-color--);
+        padding-bottom: 20px;
+    }
+
+    footer h5{
+        padding-bottom: 15px;
+    }
+
+    footer h5 a{
+        font-size: 16px;
+        color: var(--hero-nav-text-color--);
+        padding-bottom: 20px;
+        cursor: pointer;
+        transition: all 0.3s ease-in-out;
+    }
+
+    footer h5 a:hover{
+        color: var(--nav-btn-color--);
+    }
+
+    footer h5 a i{
+        padding-right: 10px;
+    }
+
+    .copy-rights{
+        color: var(--hero-nav-text-color--);
+        position: absolute;
+        bottom: 0;
+        width: 100%;
+        text-align: center;
+        padding: 20px 0px;
+    }
+
+
+}

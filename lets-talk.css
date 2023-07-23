@@ -1,0 +1,965 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style-type: none;
+}
+
+:root {
+
+
+    /* Fonts */
+
+    --nav-logo-font-faminly--:'Montserrat', sans-serif;
+    --hero-font-family--:'Oswald', sans-serif;
+    --hero2-font-family--: 'Raleway', sans-serif;
+    --body-font-family--:'Lato', sans-serif;
+
+
+    /* colors */
+
+    --hero-nav-color--: rgb(12, 58, 74);
+    --hero-nav-text-color--: #ffffff;
+    --nav-btn-color--: #FFA500;
+    --body-background--: #ffffff;
+    --body-text-color--: #333333;
+    --dark-gray--:#CCCCCC;
+    --light-gray--:#F5F5F5;
+}
+
+body{
+    font-family: var(--body-font-family--);
+    color: var(--body-text-color--);
+    background: var(--body-background--);
+    scroll-behavior: smooth;
+}
+
+/* Styles for screens 1200px and above (e.g., desktops) */
+@media only screen and (min-width: 1200px){
+
+    header{
+        background-color: var(--light-gray--);
+        margin-left: 20px;
+        margin-right: 10px;
+        border-radius: 10px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        padding: 40px 20px;
+
+    }
+
+    nav{
+        display: flex;
+        flex-direction: column-reverse;
+
+        
+    }
+
+    .nav-logo{
+        font-family: var(--nav-logo-font-faminly--);
+        font-size: 23px;
+        font-weight: bold;
+        letter-spacing: 3px;
+        padding-top: 20px;
+    }
+
+    .nav-logo span{
+        color: var(--nav-btn-color--);
+    }
+
+    nav .nav-items a{
+        font-weight: bold;
+        font-size: 17px;
+        color: var(--hero-nav-color--);
+        font-family: var(--nav-logo-font-faminly--);
+        transition: all 0.3s ease-in-out;
+    }
+
+    nav .nav-items a:hover{
+        color: var(--nav-btn-color--);
+    }
+
+    .hamburger{
+        display: none;
+    }
+
+    .social-links h5 {
+        padding-top: 10px;
+    }
+
+    .social-links h5 a{
+        color: var(--body-text-color--);
+        font-size: 17px;
+        transition: color 0.3s ease-in-out;
+    }
+
+    .social-links h5 a:hover{
+        color: var(--nav-btn-color--);
+    }
+
+    .social-links h5 a i{
+        padding-right: 10px;
+        font-size: 20px;
+    }
+
+    body{
+        display: grid;
+        grid-template-columns: 30% auto;
+        gap: 0px;
+    }
+
+    .form-content{
+       
+        height: 100vh;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        background-color: var(--light-gray--);
+        border-top-left-radius: 10px;
+        border-bottom-left-radius: 10px;
+        margin-left: 10px;
+    }
+
+    .form-content .form-txt h2{
+       
+        font-size: 30px;
+        font-weight: bold;
+        color: black;
+    }
+
+    .form-content .form-txt h3{
+       
+        font-size: 16px;
+        color: #9e9a9a;
+        padding-top: 10px;
+        padding-bottom: 20px;
+    }
+
+    .form-content form{
+       
+        display: flex;
+        flex-direction: column;
+    }
+
+    .form-content form .name{
+        display: flex;
+        column-gap: 30px;
+         
+     }
+
+    
+
+    .form-content form .name .first-name,.last-name{
+       display: flex;
+       flex-direction: column;
+        
+    }
+
+    .form-content form .name .first-name{
+        margin-bottom: 20px;
+         
+    }
+
+    .form-content form .name .first-name label{
+       font-size: 17px;
+       font-weight: bold;
+       padding-bottom: 7px;
+         
+    }
+
+    .form-content form .name .first-name input{
+        outline: none;
+        border: 1px solid var(--dark-gray--);
+        border-radius: 10px;
+        padding: 15px 20px;
+          
+    }
+
+    .form-content form .name .first-name input:focus{
+        outline: none;
+        border: 1px solid var(--nav-btn-color--);
+          
+    }
+
+    .form-content form .name .last-name label{
+        font-size: 17px;
+        font-weight: bold;
+        padding-bottom: 7px;
+          
+     }
+ 
+     .form-content form .name .last-name input{
+         outline: none;
+         border: 1px solid var(--dark-gray--);
+         border-radius: 10px;
+         padding: 15px 20px;
+         margin-bottom: 20px;
+           
+     }
+ 
+     .form-content form .name .last-name input:focus{
+         outline: none;
+         border: 1px solid var(--nav-btn-color--);
+           
+     }
+
+     .form-content form .email{
+        display: flex;
+        flex-direction: column;
+          
+     }
+
+     .form-content form .email label{
+        font-size: 17px;
+        font-weight: bold;
+        padding-bottom: 7px;
+          
+     }
+ 
+     .form-content form .email input{
+         outline: none;
+         border: 1px solid var(--dark-gray--);
+         border-radius: 10px;
+         padding: 15px 20px;
+         margin-bottom: 20px;
+           
+     }
+ 
+     .form-content form .email input:focus{
+         outline: none;
+         border: 1px solid var(--nav-btn-color--);
+           
+     }
+
+    .form-content form .message{
+        display: flex;
+        flex-direction: column;
+          
+    }
+
+    .form-content form .message label{
+        font-size: 17px;
+        font-weight: bold;
+        padding-bottom: 7px;
+          
+    }
+
+    .form-content form .message textarea{
+        outline: none;
+        border: 1px solid var(--dark-gray--);
+        border-radius: 10px;
+        padding: 15px 20px;
+        margin-bottom: 20px;
+          
+    }
+
+    .form-content form .message textarea:focus{
+        outline: none;
+        border: 1px solid var(--nav-btn-color--);
+          
+    }
+
+    /* Form button */
+
+    .form-content form button{
+        outline: none;
+        border: none;
+        padding: 15px 20px;
+        border-radius: 10px;
+        background-color: var(--nav-btn-color--);
+        color: var(--hero-nav-text-color--);
+        cursor: pointer;
+        transition: all 0.3s ease-in-out;
+        font-weight: bold;
+        letter-spacing: 2px;
+          
+    }
+
+    .form-content form button:hover{
+        color: var(--body-text-color--);
+        background-color: var(--hero-nav-text-color--);
+    }
+
+    /* hero section */
+}
+
+
+/* Styles for screens between 992px and 1199px (e.g., laptops) */
+@media only screen and (min-width: 992px) and (max-width: 1199px){
+
+    header{
+        background-color: var(--light-gray--);
+        margin-left: 20px;
+        margin-right: 10px;
+        border-radius: 10px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        padding: 40px 20px;
+
+    }
+
+    nav{
+        display: flex;
+        flex-direction: column-reverse;
+
+        
+    }
+
+    .nav-logo{
+        font-family: var(--nav-logo-font-faminly--);
+        font-size: 23px;
+        font-weight: bold;
+        letter-spacing: 3px;
+        padding-top: 20px;
+    }
+
+    .nav-logo span{
+        color: var(--nav-btn-color--);
+    }
+
+    nav .nav-items a{
+        font-weight: bold;
+        font-size: 17px;
+        color: var(--hero-nav-color--);
+        font-family: var(--nav-logo-font-faminly--);
+        transition: all 0.3s ease-in-out;
+    }
+
+    nav .nav-items a:hover{
+        color: var(--nav-btn-color--);
+    }
+
+    .hamburger{
+        display: none;
+    }
+
+    .social-links h5 {
+        padding-top: 10px;
+    }
+
+    .social-links h5 a{
+        color: var(--body-text-color--);
+        font-size: 17px;
+        transition: color 0.3s ease-in-out;
+    }
+
+    .social-links h5 a:hover{
+        color: var(--nav-btn-color--);
+    }
+
+    .social-links h5 a i{
+        padding-right: 10px;
+        font-size: 20px;
+    }
+
+    body{
+        display: grid;
+        grid-template-columns: 30% auto;
+        gap: 0px;
+    }
+
+    .form-content{
+       
+        height: 100vh;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        background-color: var(--light-gray--);
+        border-top-left-radius: 10px;
+        border-bottom-left-radius: 10px;
+        margin-left: 10px;
+    }
+
+    .form-content .form-txt h2{
+       
+        font-size: 30px;
+        font-weight: bold;
+        color: black;
+    }
+
+    .form-content .form-txt h3{
+       
+        font-size: 16px;
+        color: #9e9a9a;
+        padding-top: 10px;
+        padding-bottom: 20px;
+    }
+
+    .form-content form{
+       
+        display: flex;
+        flex-direction: column;
+    }
+
+    .form-content form .name{
+        display: flex;
+        column-gap: 30px;
+         
+     }
+
+    
+
+    .form-content form .name .first-name,.last-name{
+       display: flex;
+       flex-direction: column;
+        
+    }
+
+    .form-content form .name .first-name{
+        margin-bottom: 20px;
+         
+    }
+
+    .form-content form .name .first-name label{
+       font-size: 17px;
+       font-weight: bold;
+       padding-bottom: 7px;
+         
+    }
+
+    .form-content form .name .first-name input{
+        outline: none;
+        border: 1px solid var(--dark-gray--);
+        border-radius: 10px;
+        padding: 15px 20px;
+          
+    }
+
+    .form-content form .name .first-name input:focus{
+        outline: none;
+        border: 1px solid var(--nav-btn-color--);
+          
+    }
+
+    .form-content form .name .last-name label{
+        font-size: 17px;
+        font-weight: bold;
+        padding-bottom: 7px;
+          
+     }
+ 
+     .form-content form .name .last-name input{
+         outline: none;
+         border: 1px solid var(--dark-gray--);
+         border-radius: 10px;
+         padding: 15px 20px;
+         margin-bottom: 20px;
+           
+     }
+ 
+     .form-content form .name .last-name input:focus{
+         outline: none;
+         border: 1px solid var(--nav-btn-color--);
+           
+     }
+
+     .form-content form .email{
+        display: flex;
+        flex-direction: column;
+          
+     }
+
+     .form-content form .email label{
+        font-size: 17px;
+        font-weight: bold;
+        padding-bottom: 7px;
+          
+     }
+ 
+     .form-content form .email input{
+         outline: none;
+         border: 1px solid var(--dark-gray--);
+         border-radius: 10px;
+         padding: 15px 20px;
+         margin-bottom: 20px;
+           
+     }
+ 
+     .form-content form .email input:focus{
+         outline: none;
+         border: 1px solid var(--nav-btn-color--);
+           
+     }
+
+    .form-content form .message{
+        display: flex;
+        flex-direction: column;
+          
+    }
+
+    .form-content form .message label{
+        font-size: 17px;
+        font-weight: bold;
+        padding-bottom: 7px;
+          
+    }
+
+    .form-content form .message textarea{
+        outline: none;
+        border: 1px solid var(--dark-gray--);
+        border-radius: 10px;
+        padding: 15px 20px;
+        margin-bottom: 20px;
+          
+    }
+
+    .form-content form .message textarea:focus{
+        outline: none;
+        border: 1px solid var(--nav-btn-color--);
+          
+    }
+
+    /* Form button */
+
+    .form-content form button{
+        outline: none;
+        border: none;
+        padding: 15px 20px;
+        border-radius: 10px;
+        background-color: var(--nav-btn-color--);
+        color: var(--hero-nav-text-color--);
+        cursor: pointer;
+        transition: all 0.3s ease-in-out;
+        font-weight: bold;
+        letter-spacing: 2px;
+          
+    }
+
+    .form-content form button:hover{
+        color: var(--body-text-color--);
+        background-color: var(--hero-nav-text-color--);
+    }
+
+
+}
+
+/* Styles for screens between 768px and 991px (e.g., tablets) */
+@media only screen and (min-width: 768px) and (max-width: 991px){
+    header{
+        display: none;
+    }
+
+    body{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        min-height: 100vh;
+        background-color: var(--light-gray--);
+    }
+
+
+
+    .form-content{
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        padding: 0px 50px;
+        
+        
+    }
+
+    .nav-items {
+        margin-bottom: 15px;
+    }
+
+    .nav-items a{
+        font-weight: bold;
+        font-size: 25px;
+        color: var(--hero-nav-color--);
+        font-family: var(--nav-logo-font-faminly--);
+        transition: all 0.3s ease-in-out;
+    }
+
+    .nav-items a:hover{
+        color: var(--nav-btn-color--);
+    }
+
+    .form-content .form-txt h2{
+       
+        font-size: 36px;
+        font-weight: bold;
+        color: black;
+    }
+
+    .form-content .form-txt h3{
+       
+        font-size: 22px;
+        color: #9e9a9a;
+        padding-top: 10px;
+        padding-bottom: 20px;
+    }
+
+    .form-content form{
+       
+        display: flex;
+        flex-direction: column;
+    }
+
+    .form-content form .name{
+        display: flex;
+        column-gap: 30px;
+         
+     }
+
+    
+
+    .form-content form .name .first-name,.last-name{
+       display: flex;
+       flex-direction: column;
+        
+    }
+
+    .form-content form .name .first-name{
+        margin-bottom: 20px;
+        flex: 1;
+         
+    }
+
+    .form-content form .name .first-name label{
+       font-size: 25px;
+       font-weight: bold;
+       padding-bottom: 7px;
+         
+    }
+
+    .form-content form .name .first-name input{
+        height: 70px;
+        outline: none;
+        border: 1px solid var(--dark-gray--);
+        border-radius: 10px;
+        padding: 15px 20px;
+          
+    }
+
+    .form-content form .name .first-name input:focus{
+        outline: none;
+        border: 1px solid var(--nav-btn-color--);
+          
+    }
+
+    .form-content form .name .last-name{
+        flex: 1;
+     }
+
+    
+
+    .form-content form .name .last-name label{
+        font-size: 25px;
+        font-weight: bold;
+        padding-bottom: 7px;
+          
+     }
+ 
+     .form-content form .name .last-name input{
+         outline: none;
+         border: 1px solid var(--dark-gray--);
+         border-radius: 10px;
+         padding: 15px 20px;
+         margin-bottom: 20px;
+         height: 70px;
+           
+     }
+ 
+     .form-content form .name .last-name input:focus{
+         outline: none;
+         border: 1px solid var(--nav-btn-color--);
+           
+     }
+
+     .form-content form .email{
+        display: flex;
+        flex-direction: column;
+        
+          
+     }
+
+     .form-content form .email label{
+        font-size: 25px;
+        font-weight: bold;
+        padding-bottom: 7px;
+          
+     }
+ 
+     .form-content form .email input{
+         outline: none;
+         border: 1px solid var(--dark-gray--);
+         border-radius: 10px;
+         padding: 15px 20px;
+         margin-bottom: 25px;
+         width: 100%;
+         height: 70px;
+           
+     }
+ 
+     .form-content form .email input:focus{
+         outline: none;
+         border: 1px solid var(--nav-btn-color--);
+           
+     }
+
+    .form-content form .message{
+        display: flex;
+        flex-direction: column;
+          
+    }
+
+    .form-content form .message label{
+        font-size: 25px;
+        font-weight: bold;
+        padding-bottom: 7px;
+          
+    }
+
+    .form-content form .message textarea{
+        outline: none;
+        border: 1px solid var(--dark-gray--);
+        border-radius: 10px;
+        padding: 15px 20px;
+        margin-bottom: 20px;
+          
+    }
+
+    .form-content form .message textarea:focus{
+        outline: none;
+        border: 1px solid var(--nav-btn-color--);
+          
+    }
+
+    /* Form button */
+
+    .form-content form button{
+        outline: none;
+        border: none;
+        padding: 15px 20px;
+        border-radius: 10px;
+        background-color: var(--nav-btn-color--);
+        color: var(--hero-nav-text-color--);
+        cursor: pointer;
+        transition: all 0.3s ease-in-out;
+        font-weight: bold;
+        letter-spacing: 2px;
+          
+    }
+
+    .form-content form button:hover{
+        color: var(--body-text-color--);
+        background-color: var(--hero-nav-text-color--);
+    }
+}
+
+
+/* Styles for screens smaller than or equal to 767px (e.g., mobile devices) */
+@media only screen and (max-width: 767px){
+    header{
+        display: none;
+    }
+
+    body{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        min-height: 100vh;
+        background-color: var(--light-gray--);
+    }
+
+
+
+    .form-content{
+
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        
+        
+    }
+
+    .nav-items {
+        margin-bottom: 15px;
+    }
+
+    .nav-items a{
+        font-weight: bold;
+        font-size: 17px;
+        color: var(--hero-nav-color--);
+        font-family: var(--nav-logo-font-faminly--);
+        transition: all 0.3s ease-in-out;
+    }
+
+    .nav-items a:hover{
+        color: var(--nav-btn-color--);
+    }
+
+    .form-content .form-txt h2{
+       
+        font-size: 25px;
+        font-weight: bold;
+        color: black;
+    }
+
+    .form-content .form-txt h3{
+       
+        font-size: 16px;
+        color: #9e9a9a;
+        padding-top: 10px;
+        padding-bottom: 20px;
+    }
+
+    .form-content form{
+       
+        display: flex;
+        flex-direction: column;
+    }
+
+    .form-content form .name{
+        display: flex;
+        column-gap: 30px;
+         
+     }
+
+    
+
+    .form-content form .name .first-name,.last-name{
+       display: flex;
+       flex-direction: column;
+        
+    }
+
+    .form-content form .name .first-name{
+        margin-bottom: 20px;
+         
+    }
+
+    .form-content form .name .first-name label{
+       font-size: 17px;
+       font-weight: bold;
+       padding-bottom: 7px;
+         
+    }
+
+    .form-content form .name .first-name input{
+        width: 150px;
+        outline: none;
+        border: 1px solid var(--dark-gray--);
+        border-radius: 10px;
+        padding: 15px 20px;
+          
+    }
+
+    .form-content form .name .first-name input:focus{
+        outline: none;
+        border: 1px solid var(--nav-btn-color--);
+          
+    }
+
+    .form-content form .name .last-name label{
+        font-size: 17px;
+        font-weight: bold;
+        padding-bottom: 7px;
+          
+     }
+ 
+     .form-content form .name .last-name input{
+         outline: none;
+         border: 1px solid var(--dark-gray--);
+         border-radius: 10px;
+         padding: 15px 20px;
+         margin-bottom: 20px;
+         width: 150px;
+           
+     }
+ 
+     .form-content form .name .last-name input:focus{
+         outline: none;
+         border: 1px solid var(--nav-btn-color--);
+           
+     }
+
+     .form-content form .email{
+        display: flex;
+        flex-direction: column;
+          
+     }
+
+     .form-content form .email label{
+        font-size: 17px;
+        font-weight: bold;
+        padding-bottom: 7px;
+          
+     }
+ 
+     .form-content form .email input{
+         outline: none;
+         border: 1px solid var(--dark-gray--);
+         border-radius: 10px;
+         padding: 15px 20px;
+         margin-bottom: 20px;
+           
+     }
+ 
+     .form-content form .email input:focus{
+         outline: none;
+         border: 1px solid var(--nav-btn-color--);
+           
+     }
+
+    .form-content form .message{
+        display: flex;
+        flex-direction: column;
+          
+    }
+
+    .form-content form .message label{
+        font-size: 17px;
+        font-weight: bold;
+        padding-bottom: 7px;
+          
+    }
+
+    .form-content form .message textarea{
+        outline: none;
+        border: 1px solid var(--dark-gray--);
+        border-radius: 10px;
+        padding: 15px 20px;
+        margin-bottom: 20px;
+          
+    }
+
+    .form-content form .message textarea:focus{
+        outline: none;
+        border: 1px solid var(--nav-btn-color--);
+          
+    }
+
+    /* Form button */
+
+    .form-content form button{
+        outline: none;
+        border: none;
+        padding: 15px 20px;
+        border-radius: 10px;
+        background-color: var(--nav-btn-color--);
+        color: var(--hero-nav-text-color--);
+        cursor: pointer;
+        transition: all 0.3s ease-in-out;
+        font-weight: bold;
+        letter-spacing: 2px;
+          
+    }
+
+    .form-content form button:hover{
+        color: var(--body-text-color--);
+        background-color: var(--hero-nav-text-color--);
+    }
+
+}
