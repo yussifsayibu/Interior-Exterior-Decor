@@ -1,0 +1,1222 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style-type: none;
+}
+
+:root {
+
+
+    /* Fonts */
+
+    --nav-logo-font-faminly--:'Montserrat', sans-serif;
+    --hero-font-family--:'Oswald', sans-serif;
+    --hero2-font-family--: 'Raleway', sans-serif;
+    --body-font-family--:'Lato', sans-serif;
+
+
+    /* colors */
+
+    --hero-nav-color--: rgb(12, 58, 74);
+    --hero-nav-text-color--: #ffffff;
+    --nav-btn-color--: #FFA500;
+    --body-background--: #ffffff;
+    --body-text-color--: #333333;
+    --dark-gray--:#CCCCCC;
+    --light-gray--:#F5F5F5;
+}
+
+body{
+    font-family: var(--body-font-family--);
+    color: var(--body-text-color--);
+    background: var(--body-background--);
+    scroll-behavior: smooth;
+}
+
+.hamburger .line{
+    width: 35px;
+    height: 3px;
+    margin: 5px;
+    background-color: var(--hero-nav-text-color--);
+}
+
+/* Styles for screens 1200px and above (e.g., desktops) */
+@media only screen and (min-width: 1200px){
+
+    header{
+        background-color: var(--hero-nav-color--);
+        position: sticky;
+        top: 0;
+        z-index: 2;
+
+    }
+
+    nav{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        margin: 0px 80px;
+        padding-top: 30px;
+        padding-bottom: 30px;
+    }
+
+    .nav-logo{
+        color: var(--hero-nav-text-color--);
+        font-family: var(--nav-logo-font-faminly--);
+        font-size: 30px;
+        font-weight: bold;
+        letter-spacing: 3px;
+    }
+
+    .nav-logo span{
+        color: var(--nav-btn-color--);
+    }
+
+    nav .nav-items{
+        display: flex;
+        gap: 30px;
+        align-items: center;
+    }
+
+    nav .nav-items a{
+        font-weight: bold;
+        font-size: 18px;
+        color: var(--hero-nav-text-color--);
+        font-family: var(--nav-logo-font-faminly--);
+        position: relative;
+    }
+
+    /* Hover state */
+  nav .nav-items a:hover {
+    color: var(--nav-btn-color--);
+  }
+  
+  /* Active state */
+  nav .nav-items a.active {
+    color: white;
+  }
+  
+  /* Add :before and :after pseudo-elements */
+  nav .nav-items a:before,
+  nav .nav-items a:after {
+    content: "";
+    position: absolute;
+    height: 2px;
+    width: 0;
+    background-color: var(--nav-btn-color--);
+    bottom: -2px;
+    transition: width 0.2s ease;
+  }
+  
+  /* Style :before for active and hover state */
+  nav .nav-items a.active:before,
+  nav .nav-items a:hover:before {
+    width: 100%;
+    
+  }
+
+    nav .nav-btn{
+        border: none;
+        outline: none;
+        color: var(--hero-nav-text-color--);
+        background-color: var(--nav-btn-color--);
+        border-radius: 10px;
+        padding: 10px 15px;
+        font-size: 18px;
+        font-weight: bold;
+        font-family: var(--nav-logo-font-faminly--);
+        cursor: pointer;
+    }
+
+    nav .nav-btn:hover{
+        background-color: transparent;
+        border: 1px solid var(--nav-btn-color--);
+    }
+
+    nav .nav-btn a{
+        color: var(--hero-nav-text-color--);
+        font-size: 18px;
+        font-weight: bold;
+        font-family: var(--nav-logo-font-faminly--);
+        cursor: pointer;
+    }
+
+    .hamburger{
+        display: none;
+    }
+
+    /* Exterior */
+
+    .exterior{
+        background-color: var(--light-gray--);
+        padding: 40px 80px;
+    }
+
+    .exterior-container{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        row-gap: 30px;
+    }
+
+    .exterior-container .exterior-container h2{
+        font-size: 24px;
+        line-height: 35px;
+        color: var(--body-text-color--);
+
+    }
+
+
+    .exteriror-item{
+        width: 300px;
+        height: 400px;
+        box-shadow: 2px 4px 4px rgba(0, 0, 0, 0.2);
+        background: linear-gradient(135deg, rgba(255, 255, 255, 0.308), rgba(12, 58, 74, 0.582));
+        backdrop-filter: blur(10px);
+        border-radius: 10px;
+        padding: 25px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        transition: transform 0.3s ease-in-out;
+    }
+
+
+    .exteriror-item h3{
+        font-size: 20px;
+        color:var(--hero-nav-color--);
+        padding-top: 10px;
+        padding-bottom: 10px;
+    }
+
+
+    .card-img{
+        width: 100%;
+        height: 250px;
+        background: url(asset/images/exterior-1.jpg) no-repeat;
+        background-size: cover;
+        background-position: center;
+        border-radius: 10px;
+        padding: 30px;
+        object-fit: cover;
+    }
+
+
+    .card-img-2{
+        width: 100%;
+        height: 250px;
+
+        background: url(asset/images/exterior-2.jpg) no-repeat;
+        background-size: cover;
+        background-position: center;
+    }
+
+    .card-img-3{
+
+        background: url(asset/images/exterior-3.jpg) no-repeat;
+        background-size: cover;
+        background-position: center;
+    }
+
+    .card-img-4{
+
+        background: url(asset/images/exterior-4.jpg) no-repeat;
+        background-size: cover;
+        background-position: center;
+    }
+
+    .card-img-5{
+
+        background: url(asset/images/exterior-6.jpg) no-repeat;
+        background-size: cover;
+        background-position: center;
+    }
+    
+
+  
+
+     /* footer section */
+
+     footer{
+        background-color: var(--hero-nav-color--);
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        position: relative;
+    }
+
+    .footer-content{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 90px 80px;
+        margin-bottom: 40px;
+    }
+
+    .footer-content .logo-items p{
+        font-size: 24px;
+        color: var(--hero-nav-text-color--);
+        padding-top: 15px;
+    }
+
+    .footer-content .logo-items h4{
+        font-size: 25px;
+        color: var(--hero-nav-text-color--);
+        padding-top: 15px;
+    }
+
+    .footer-content .logo-items h4 i{
+        padding-right: 10px;
+        color: var(--nav-btn-color--);
+    }
+
+    footer h3{
+        font-size: 20px;
+        color: var(--hero-nav-text-color--);
+        padding-bottom: 20px;
+    }
+
+    footer h5{
+        padding-bottom: 15px;
+    }
+
+    footer h5 a{
+        font-size: 16px;
+        color: var(--hero-nav-text-color--);
+        padding-bottom: 20px;
+        cursor: pointer;
+        transition: all 0.3s ease-in-out;
+    }
+
+    footer h5 a:hover{
+        color: var(--nav-btn-color--);
+    }
+
+    footer h5 a i{
+        padding-right: 10px;
+    }
+
+    .copy-rights{
+        color: var(--hero-nav-text-color--);
+        position: absolute;
+        bottom: 0;
+        width: 100%;
+        text-align: center;
+        padding: 20px 0px;
+    }
+
+
+    .slide-in {
+        opacity: 0;
+        transform: translateY(50px); /* Start the element 50px below its original position */
+        transition: opacity 0.5s ease, transform 0.5s ease;
+    }
+
+    .slide-in.active {
+        opacity: 1;
+        transform: translateY(0); /* Slide the element back to its original position */
+    }
+
+
+    
+    
+    
+
+
+}
+
+
+/* Styles for screens between 992px and 1199px (e.g., laptops) */
+@media only screen and (min-width: 992px) and (max-width: 1199px){
+    header{
+        background-color: var(--hero-nav-color--);
+        position: sticky;
+        top: 0;
+        z-index: 2;
+
+    }
+
+    nav{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        margin: 0px 50px;
+        padding-top: 30px;
+        padding-bottom: 30px;
+    }
+
+    .nav-logo{
+        color: var(--hero-nav-text-color--);
+        font-family: var(--nav-logo-font-faminly--);
+        font-size: 30px;
+        font-weight: bold;
+        letter-spacing: 3px;
+    }
+
+    .nav-logo span{
+        color: var(--nav-btn-color--);
+    }
+
+    nav .nav-items{
+        display: flex;
+        gap: 30px;
+        align-items: center;
+    }
+
+    nav .nav-items a{
+        font-weight: bold;
+        font-size: 18px;
+        color: var(--hero-nav-text-color--);
+        font-family: var(--nav-logo-font-faminly--);
+        position: relative;
+    }
+
+    /* Hover state */
+  nav .nav-items a:hover {
+    color: var(--nav-btn-color--);
+  }
+  
+  /* Active state */
+  nav .nav-items a.active {
+    color: white;
+  }
+  
+  /* Add :before and :after pseudo-elements */
+  nav .nav-items a:before,
+  nav .nav-items a:after {
+    content: "";
+    position: absolute;
+    height: 2px;
+    width: 0;
+    background-color: var(--nav-btn-color--);
+    bottom: -2px;
+    transition: width 0.2s ease;
+  }
+  
+  /* Style :before for active and hover state */
+  nav .nav-items a.active:before,
+  nav .nav-items a:hover:before {
+    width: 100%;
+    
+  }
+
+    nav .nav-btn{
+        border: none;
+        outline: none;
+        color: var(--hero-nav-text-color--);
+        background-color: var(--nav-btn-color--);
+        border-radius: 10px;
+        padding: 10px 15px;
+        font-size: 18px;
+        font-weight: bold;
+        font-family: var(--nav-logo-font-faminly--);
+        cursor: pointer;
+    }
+
+    nav .nav-btn:hover{
+        background-color: transparent;
+        border: 1px solid var(--nav-btn-color--);
+    }
+
+    nav .nav-btn a{
+        color: var(--hero-nav-text-color--);
+        font-size: 18px;
+        font-weight: bold;
+        font-family: var(--nav-logo-font-faminly--);
+        cursor: pointer;
+    }
+
+    .hamburger{
+        display: none;
+    }
+
+
+
+
+    .exterior{
+        background-color: var(--light-gray--);
+        padding: 40px 80px;
+    }
+
+    .exterior-container{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        row-gap: 30px;
+    }
+
+    .exterior-container .exterior-container h2{
+        font-size: 24px;
+        line-height: 35px;
+        color: var(--body-text-color--);
+
+    }
+
+
+    .exteriror-item{
+        width: 300px;
+        height: 400px;
+        box-shadow: 2px 4px 4px rgba(0, 0, 0, 0.2);
+        background: linear-gradient(135deg, rgba(255, 255, 255, 0.308), rgba(12, 58, 74, 0.582));
+        backdrop-filter: blur(10px);
+        border-radius: 10px;
+        padding: 25px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        transition: transform 0.3s ease-in-out;
+    }
+
+
+    .exteriror-item h3{
+        font-size: 20px;
+        color:var(--hero-nav-color--);
+        padding-top: 10px;
+        padding-bottom: 10px;
+    }
+
+
+    .card-img{
+        width: 100%;
+        height: 250px;
+        background: url(asset/images/exterior-1.jpg) no-repeat;
+        background-size: cover;
+        background-position: center;
+        border-radius: 10px;
+        padding: 30px;
+        object-fit: cover;
+    }
+
+
+    .card-img-2{
+        width: 100%;
+        height: 250px;
+
+        background: url(asset/images/exterior-2.jpg) no-repeat;
+        background-size: cover;
+        background-position: center;
+    }
+
+    .card-img-3{
+
+        background: url(asset/images/exterior-3.jpg) no-repeat;
+        background-size: cover;
+        background-position: center;
+    }
+
+    .card-img-4{
+
+        background: url(asset/images/exterior-4.jpg) no-repeat;
+        background-size: cover;
+        background-position: center;
+    }
+
+    .card-img-5{
+
+        background: url(asset/images/exterior-6.jpg) no-repeat;
+        background-size: cover;
+        background-position: center;
+    }
+
+
+     /* footer section */
+
+     footer{
+        background-color: var(--hero-nav-color--);
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        position: relative;
+    }
+
+    .footer-content{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 90px 50px;
+        margin-bottom: 40px;
+    }
+
+    .footer-content .logo-items p{
+        font-size: 24px;
+        color: var(--hero-nav-text-color--);
+        padding-top: 15px;
+    }
+
+    .footer-content .logo-items h4{
+        font-size: 25px;
+        color: var(--hero-nav-text-color--);
+        padding-top: 15px;
+    }
+
+    .footer-content .logo-items h4 i{
+        padding-right: 10px;
+        color: var(--nav-btn-color--);
+    }
+
+    footer h3{
+        font-size: 20px;
+        color: var(--hero-nav-text-color--);
+        padding-bottom: 20px;
+    }
+
+    footer h5{
+        padding-bottom: 15px;
+    }
+
+    footer h5 a{
+        font-size: 16px;
+        color: var(--hero-nav-text-color--);
+        padding-bottom: 20px;
+        cursor: pointer;
+        transition: all 0.3s ease-in-out;
+    }
+
+    footer h5 a:hover{
+        color: var(--nav-btn-color--);
+    }
+
+    footer h5 a i{
+        padding-right: 10px;
+    }
+
+    .copy-rights{
+        color: var(--hero-nav-text-color--);
+        position: absolute;
+        bottom: 0;
+        width: 100%;
+        text-align: center;
+        padding: 20px 0px;
+    }
+
+
+    .slide-in {
+        opacity: 0;
+        transform: translateY(50px); /* Start the element 50px below its original position */
+        transition: opacity 0.5s ease, transform 0.5s ease;
+    }
+
+    .slide-in.active {
+        opacity: 1;
+        transform: translateY(0); /* Slide the element back to its original position */
+    }
+}
+
+/* Styles for screens between 768px and 991px (e.g., tablets) */
+@media only screen and (min-width: 768px) and (max-width: 991px){
+
+    header{
+        background-color: var(--hero-nav-color--);
+        position: sticky;
+        top: 0;
+        z-index: 2;
+    
+    }
+    
+    nav{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        margin: 0px 25px;
+        padding-top: 25px;
+        padding-bottom: 25px;
+    }
+    
+    .nav-logo{
+        color: var(--hero-nav-text-color--);
+        font-family: var(--nav-logo-font-faminly--);
+        font-size: 27px;
+        font-weight: bold;
+        letter-spacing: 3px;
+    }
+    
+    .nav-logo span{
+        color: var(--nav-btn-color--);
+    }
+    
+    nav .nav-items{
+        display: flex;
+        flex-direction: column;
+        gap: 50px;
+        align-items: center;
+        justify-content: center;
+        position: absolute;
+        width: 100vw;
+        height: 0;
+        opacity: 0;
+        background-color: var(--hero-nav-color--);
+        right: 0;
+        left: 0;
+        top: 6vh;
+        transition:all 0.3s ease;
+        overflow: hidden;
+    }
+
+
+    .nav-items.nav-trigger{
+        opacity: 1;
+        height: 100vh;
+    }
+    
+    nav .nav-items a{
+        font-weight: bold;
+        font-size: 25px;
+        color: var(--hero-nav-text-color--);
+        font-family: var(--nav-logo-font-faminly--);
+        position: relative;
+    }
+    
+    /* Hover state */
+    nav .nav-items a:hover {
+    color: var(--nav-btn-color--);
+    }
+    
+    /* Active state */
+    nav .nav-items a.active {
+    color: white;
+    }
+    
+    /* Add :before and :after pseudo-elements */
+    nav .nav-items a:before,
+    nav .nav-items a:after {
+    content: "";
+    position: absolute;
+    height: 2px;
+    width: 0;
+    background-color: var(--nav-btn-color--);
+    bottom: -2px;
+    transition: width 0.2s ease;
+    }
+    
+    /* Style :before for active and hover state */
+    nav .nav-items a.active:before,
+    nav .nav-items a:hover:before {
+    width: 100%;
+    
+    }
+    
+    
+    
+    nav .nav-btn{
+        border: none;
+        outline: none;
+        color: var(--hero-nav-text-color--);
+        background-color: var(--nav-btn-color--);
+        border-radius: 10px;
+        padding: 10px 15px;
+        font-weight: bold;
+        font-family: var(--nav-logo-font-faminly--);
+        cursor: pointer;
+        transition: All 0.3s ease-in-out;
+    }
+    
+    nav .nav-btn:hover{
+        background-color: transparent;
+        border: 1px solid var(--nav-btn-color--);
+    }
+    
+    nav .nav-btn a{
+        color: var(--hero-nav-text-color--);
+        font-size: 20px;
+        font-weight: bold;
+        font-family: var(--nav-logo-font-faminly--);
+        cursor: pointer;
+    }
+    
+    .hamburger{
+        display: block;
+        cursor: pointer;
+
+    }
+
+    
+
+    .toggle .line:nth-child(2){
+        opacity: 0;
+    }
+
+    .toggle .line:nth-child(1){
+        transform: rotate(-45deg) translate(-5px,6px);
+        transition: all 0.3s ease;
+    }
+
+    .toggle .line:nth-child(3){
+        transform: rotate(45deg) translate(-5px,-6px);
+        transition: all 0.3s ease;
+    }
+
+
+
+    .exterior{
+        background-color: var(--light-gray--);
+        padding: 40px 80px;
+    }
+
+    .exterior-container{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        row-gap: 30px;
+    }
+
+    .exterior-container .exterior-container h2{
+        font-size: 24px;
+        line-height: 35px;
+        color: var(--body-text-color--);
+
+    }
+
+
+    .exteriror-item{
+        width: 300px;
+        height: 400px;
+        box-shadow: 2px 4px 4px rgba(0, 0, 0, 0.2);
+        background: linear-gradient(135deg, rgba(255, 255, 255, 0.308), rgba(12, 58, 74, 0.582));
+        backdrop-filter: blur(10px);
+        border-radius: 10px;
+        padding: 25px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        transition: transform 0.3s ease-in-out;
+    }
+
+
+    .exteriror-item h3{
+        font-size: 20px;
+        color:var(--hero-nav-color--);
+        padding-top: 10px;
+        padding-bottom: 10px;
+    }
+
+
+    .card-img{
+        width: 100%;
+        height: 250px;
+        background: url(asset/images/exterior-1.jpg) no-repeat;
+        background-size: cover;
+        background-position: center;
+        border-radius: 10px;
+        padding: 30px;
+        object-fit: cover;
+    }
+
+
+    .card-img-2{
+        width: 100%;
+        height: 250px;
+
+        background: url(asset/images/exterior-2.jpg) no-repeat;
+        background-size: cover;
+        background-position: center;
+    }
+
+    .card-img-3{
+
+        background: url(asset/images/exterior-3.jpg) no-repeat;
+        background-size: cover;
+        background-position: center;
+    }
+
+    .card-img-4{
+
+        background: url(asset/images/exterior-4.jpg) no-repeat;
+        background-size: cover;
+        background-position: center;
+    }
+
+    .card-img-5{
+
+        background: url(asset/images/exterior-6.jpg) no-repeat;
+        background-size: cover;
+        background-position: center;
+    }
+
+
+
+ 
+
+     /* footer section */
+
+     footer{
+        background-color: var(--hero-nav-color--);
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        position: relative;
+    }
+
+    .footer-content{
+        display: flex;
+        justify-content: space-between;
+        padding: 90px 25px;
+        margin-bottom: 40px;
+    }
+
+    .footer-content .logo-items p{
+        font-size: 20px;
+        color: var(--hero-nav-text-color--);
+        padding-top: 15px;
+    }
+
+    .footer-content .logo-items h4{
+        font-size: 20px;
+        color: var(--hero-nav-text-color--);
+        padding-top: 15px;
+    }
+
+    .footer-content .logo-items h4 i{
+        padding-right: 10px;
+        color: var(--nav-btn-color--);
+    }
+
+    footer h3{
+        font-size: 20px;
+        color: var(--hero-nav-text-color--);
+        padding-bottom: 20px;
+    }
+
+    footer h5{
+        padding-bottom: 15px;
+    }
+
+    footer h5 a{
+        font-size: 16px;
+        color: var(--hero-nav-text-color--);
+        padding-bottom: 20px;
+        cursor: pointer;
+        transition: all 0.3s ease-in-out;
+    }
+
+    footer h5 a:hover{
+        color: var(--nav-btn-color--);
+    }
+
+    footer h5 a i{
+        padding-right: 10px;
+    }
+
+    .copy-rights{
+        color: var(--hero-nav-text-color--);
+        position: absolute;
+        bottom: 0;
+        width: 100%;
+        text-align: center;
+        padding: 20px 0px;
+    }
+}
+
+/* Styles for screens smaller than or equal to 767px (e.g., mobile devices) */
+@media only screen and (max-width: 767px){
+
+
+    header{
+        background-color: var(--hero-nav-color--);
+        position: sticky;
+        top: 0;
+        z-index: 2;
+    
+    }
+    
+    nav{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        margin: 0px 20px;
+        padding-top: 25px;
+        padding-bottom: 25px;
+    }
+    
+    .nav-logo{
+        color: var(--hero-nav-text-color--);
+        font-family: var(--nav-logo-font-faminly--);
+        font-size: 18px;
+        font-weight: bold;
+        letter-spacing: 3px;
+    }
+    
+    .nav-logo span{
+        color: var(--nav-btn-color--);
+    }
+    
+    nav .nav-items{
+        display: flex;
+        flex-direction: column;
+        gap: 50px;
+        align-items: center;
+        justify-content: center;
+        position: absolute;
+        width: 100vw;
+        height: 0;
+        opacity: 0;
+        background-color: var(--hero-nav-color--);
+        right: 0;
+        left: 0;
+        top: 11.5vh;
+        transition:all 0.3s ease;
+        overflow: hidden;
+    }
+
+
+    .nav-items.nav-trigger{
+        opacity: 1;
+        height: 100vh;
+    }
+    
+    nav .nav-items a{
+        font-weight: bold;
+        font-size: 18px;
+        color: var(--hero-nav-text-color--);
+        font-family: var(--nav-logo-font-faminly--);
+        position: relative;
+    }
+    
+    /* Hover state */
+    nav .nav-items a:hover {
+    color: var(--nav-btn-color--);
+    }
+    
+    /* Active state */
+    nav .nav-items a.active {
+    color: white;
+    }
+    
+    /* Add :before and :after pseudo-elements */
+    nav .nav-items a:before,
+    nav .nav-items a:after {
+    content: "";
+    position: absolute;
+    height: 2px;
+    width: 0;
+    background-color: var(--nav-btn-color--);
+    bottom: -2px;
+    transition: width 0.2s ease;
+    }
+    
+    /* Style :before for active and hover state */
+    nav .nav-items a.active:before,
+    nav .nav-items a:hover:before {
+    width: 100%;
+    
+    }
+    
+    
+    
+    nav .nav-btn{
+        border: none;
+        outline: none;
+        color: var(--hero-nav-text-color--);
+        background-color: var(--nav-btn-color--);
+        border-radius: 10px;
+        padding: 9px 9px;
+        font-size: 16px;
+        font-weight: bold;
+        font-family: var(--nav-logo-font-faminly--);
+        cursor: pointer;
+        transition: All 0.3s ease-in-out;
+    }
+    
+    nav .nav-btn:hover{
+        background-color: transparent;
+        border: 1px solid var(--nav-btn-color--);
+    }
+    
+    nav .nav-btn a{
+        color: var(--hero-nav-text-color--);
+        font-size: 15px;
+        font-weight: bold;
+        font-family: var(--nav-logo-font-faminly--);
+        cursor: pointer;
+    }
+    
+    .hamburger{
+        display: block;
+        cursor: pointer;
+
+    }
+
+    .toggle .line:nth-child(2){
+        opacity: 0;
+    }
+
+    .toggle .line:nth-child(1){
+        transform: rotate(-45deg) translate(-5px,6px);
+        transition: all 0.3s ease;
+    }
+
+    .toggle .line:nth-child(3){
+        transform: rotate(45deg) translate(-5px,-6px);
+        transition: all 0.3s ease;
+    }
+
+    .exterior{
+        background-color: var(--light-gray--);
+        padding: 40px 20px;
+    }
+
+    .exterior-container{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        flex-wrap: wrap;
+        row-gap: 30px;
+    }
+
+    .exterior-container .exterior-container h2{
+        font-size: 24px;
+        line-height: 35px;
+        color: var(--body-text-color--);
+
+    }
+
+
+    .exteriror-item{
+        width: 300px;
+        height: 400px;
+        box-shadow: 2px 4px 4px rgba(0, 0, 0, 0.2);
+        background: linear-gradient(135deg, rgba(255, 255, 255, 0.308), rgba(12, 58, 74, 0.582));
+        backdrop-filter: blur(10px);
+        border-radius: 10px;
+        padding: 25px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        transition: transform 0.3s ease-in-out;
+    }
+
+
+    .exteriror-item h3{
+        font-size: 20px;
+        color:var(--hero-nav-color--);
+        padding-top: 10px;
+        padding-bottom: 10px;
+    }
+
+
+    .card-img{
+        width: 100%;
+        height: 250px;
+        background: url(asset/images/exterior-1.jpg) no-repeat;
+        background-size: cover;
+        background-position: center;
+        border-radius: 10px;
+        padding: 30px;
+        object-fit: cover;
+    }
+
+
+    .card-img-2{
+        width: 100%;
+        height: 250px;
+
+        background: url(asset/images/exterior-2.jpg) no-repeat;
+        background-size: cover;
+        background-position: center;
+    }
+
+    .card-img-3{
+
+        background: url(asset/images/exterior-3.jpg) no-repeat;
+        background-size: cover;
+        background-position: center;
+    }
+
+    .card-img-4{
+
+        background: url(asset/images/exterior-4.jpg) no-repeat;
+        background-size: cover;
+        background-position: center;
+    }
+
+    .card-img-5{
+
+        background: url(asset/images/exterior-6.jpg) no-repeat;
+        background-size: cover;
+        background-position: center;
+    }
+
+
+
+    /* footer section */
+
+     footer{
+        background-color: var(--hero-nav-color--);
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        position: relative;
+    }
+
+    .footer-content{
+        display: flex;
+        flex-direction: column;
+        padding: 90px 20px;
+        margin-bottom: 40px;
+        gap: 30px;
+    }
+
+    .footer-content .logo-items p{
+        font-size: 20px;
+        color: var(--hero-nav-text-color--);
+        padding-top: 15px;
+    }
+
+    .footer-content .logo-items h4{
+        font-size: 20px;
+        color: var(--hero-nav-text-color--);
+        padding-top: 15px;
+    }
+
+    .footer-content .logo-items h4 i{
+        padding-right: 10px;
+        color: var(--nav-btn-color--);
+    }
+
+    footer h3{
+        font-size: 20px;
+        color: var(--hero-nav-text-color--);
+        padding-bottom: 20px;
+    }
+
+    footer h5{
+        padding-bottom: 15px;
+    }
+
+    footer h5 a{
+        font-size: 16px;
+        color: var(--hero-nav-text-color--);
+        padding-bottom: 20px;
+        cursor: pointer;
+        transition: all 0.3s ease-in-out;
+    }
+
+    footer h5 a:hover{
+        color: var(--nav-btn-color--);
+    }
+
+    footer h5 a i{
+        padding-right: 10px;
+    }
+
+    .copy-rights{
+        color: var(--hero-nav-text-color--);
+        position: absolute;
+        bottom: 0;
+        width: 100%;
+        text-align: center;
+        padding: 20px 0px;
+    }
+
+
+}

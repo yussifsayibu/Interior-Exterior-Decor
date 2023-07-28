@@ -43,6 +43,10 @@ body{
 /* Styles for screens 1200px and above (e.g., desktops) */
 @media only screen and (min-width: 1200px){
 
+    .back-home-form-mobile{
+        display: none;
+    }
+    
     header{
         background-color: var(--light-gray--);
         margin-left: 20px;
@@ -294,6 +298,10 @@ body{
 
 /* Styles for screens between 992px and 1199px (e.g., laptops) */
 @media only screen and (min-width: 992px) and (max-width: 1199px){
+
+    .back-home-form-mobile{
+        display: none;
+    }
 
     header{
         background-color: var(--light-gray--);
