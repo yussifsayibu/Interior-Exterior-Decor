@@ -500,7 +500,7 @@ body{
     }
 
     .bed-room-img-2{
-        background: url(asset/images/bed-room-2.jpg) no-repeat;
+        background: url(asset/images/mordern-bed-1.jpg) no-repeat;
         background-size: cover;
         background-position: center;
     }
@@ -1111,7 +1111,7 @@ body{
     .living-card-1{
         width: 100%;
         height: 250px;
-        background: url(asset/images/living-room-1.jpg) no-repeat;
+        background: url(asset/images/Lliving-modern-1.jpg) no-repeat;
         background-size: cover;
         background-position: center;
         border-radius: 10px;
@@ -1133,7 +1133,7 @@ body{
     .living-card-3{
         width: 100%;
         height: 250px;
-        background: url(asset/images/main-tab-living.jpg) no-repeat;
+        background: url(asset/images/living-modern-2.jpg) no-repeat;
         background-size: cover;
         background-position: center;
         border-radius: 10px;
@@ -1155,7 +1155,7 @@ body{
     .living-card-5{
         width: 100%;
         height: 250px;
-        background: url(asset/images/living-room-2.jpg) no-repeat;
+        background: url(asset/images/living-modern-3.jpg) no-repeat;
         background-size: cover;
         background-position: center;
         border-radius: 10px;
@@ -1237,6 +1237,177 @@ body{
         transition: all 0.3s ease;
         display: none;
     }
+
+
+
+     /* Dinning room */
+
+     .dinning-img-1{
+        background: url(asset/images/contemporary-dinning-1.jpg) no-repeat;
+        background-size: cover;
+        background-position: center;
+    }
+
+    .dinning-img-2{
+        background: url(asset/images/contemporary-dinning-2.jpg) no-repeat;
+        background-size: cover;
+        background-position: center;
+    }
+
+    .dinning-img-3{
+        background: url(asset/images/contemporary-dinning-3.jpg) no-repeat;
+        background-size: cover;
+        background-position: center;
+    }
+
+    .dinning-img-4{
+        background: url(asset/images/contemporary-dinning-4.jpg) no-repeat;
+        background-size: cover;
+        background-position: center;
+    }
+
+    .dinning-img-5{
+        background: url(asset/images/dinning-room-2.jpg) no-repeat;
+        background-size: cover;
+        background-position: center;
+    }
+
+
+    /* Bedroom section */
+
+    .bed-room-img-1{
+        background: url(asset/images/bed-rrom-1.jpg) no-repeat;
+        background-size: cover;
+        background-position: center;
+    }
+
+    .bed-room-img-2{
+        background: url(asset/images/mordern-bed-1.jpg) no-repeat;
+        background-size: cover;
+        background-position: center;
+    }
+
+    .bed-room-img-3{
+        background: url(asset/images/bed-room-3.jpg) no-repeat;
+        background-size: cover;
+        background-position: center;
+    }
+
+    .bed-room-img-4{
+        background: url(asset/images/bed-room-4.jpg) no-repeat;
+        background-size: cover;
+        background-position: center;
+    }
+
+    .bed-room-img-5{
+        background: url(asset/images/hero-img-2.jpg) no-repeat;
+        background-size: cover;
+        background-position: center;
+    }
+
+    /* Office section */
+
+    .office-img-1{
+        background: url(asset/images/office-1.jpg) no-repeat;
+        background-size: cover;
+        background-position: center;
+    }
+
+    .office-img-2{
+        background: url(asset/images/office-sec-2.jpg) no-repeat;
+        background-size: cover;
+        background-position: center;
+    }
+
+    .office-img-3{
+        background: url(asset/images/office-sec-3.jpg) no-repeat;
+        background-size: cover;
+        background-position: center;
+    }
+
+    .office-img-4{
+        background: url(asset/images/office-sec-4.jpg) no-repeat;
+        background-size: cover;
+        background-position: center;
+    }
+
+    .office-img-5{
+        background: url(asset/images/office-sec-1.jpg) no-repeat;
+        background-size: cover;
+        background-position: center;
+    }
+
+    /* Shops section */
+
+    .shops-img-1{
+        background: url(asset/images/shop-1.jpg) no-repeat;
+        background-size: cover;
+        background-position: center;
+    }
+
+    .shops-img-2{
+        background: url(asset/images/shop-2.jpg) no-repeat;
+        background-size: cover;
+        background-position: center;
+    }
+
+    .shops-img-3{
+        background: url(asset/images/shop-3.jpg) no-repeat;
+        background-size: cover;
+        background-position: center;
+    }
+
+    .shops-img-4{
+        background: url(asset/images/shop-4.jpg) no-repeat;
+        background-size: cover;
+        background-position: center;
+    }
+
+    .shops-img-5{
+        background: url(asset/images/shop-5.jpg) no-repeat;
+        background-size: cover;
+        background-position: center;
+    }
+
+
+    /*Main load more section */
+
+    .main-load-img-1{
+        background: url(asset/images/living-modern-2.jpg) no-repeat;
+        background-size: cover;
+        background-position: center;
+    }
+
+    .main-load-img-2{
+        background: url(asset/images/office-sec-2.jpg) no-repeat;
+        background-size: cover;
+        background-position: center;
+    }
+
+    .main-load-img-3{
+        background: url(asset/images/dinning-room-2.jpg) no-repeat;
+        background-size: cover;
+        background-position: center;
+    }
+
+    .main-load-img-4{
+        background: url(asset/images/shop-2.jpg) no-repeat;
+        background-size: cover;
+        background-position: center;
+    }
+
+    .main-load-img-5{
+        background: url(asset/images/Lliving-modern-1.jpg) no-repeat;
+        background-size: cover;
+        background-position: center;
+    }
+
+    .main-load-img-6{
+        background: url(asset/images/office-sec-4.jpg) no-repeat;
+        background-size: cover;
+        background-position: center;
+    }
+
 
     /* Banner section */
 
@@ -1756,12 +1927,12 @@ body{
         object-fit: cover;
     }
 
-    /* living section */
+      /* living section */
 
-    .living-card-1{
+      .living-card-1{
         width: 100%;
         height: 250px;
-        background: url(asset/images/living-room-1.jpg) no-repeat;
+        background: url(asset/images/Lliving-modern-1.jpg) no-repeat;
         background-size: cover;
         background-position: center;
         border-radius: 10px;
@@ -1783,7 +1954,7 @@ body{
     .living-card-3{
         width: 100%;
         height: 250px;
-        background: url(asset/images/main-tab-living.jpg) no-repeat;
+        background: url(asset/images/living-modern-2.jpg) no-repeat;
         background-size: cover;
         background-position: center;
         border-radius: 10px;
@@ -1805,7 +1976,7 @@ body{
     .living-card-5{
         width: 100%;
         height: 250px;
-        background: url(asset/images/living-room-2.jpg) no-repeat;
+        background: url(asset/images/living-modern-3.jpg) no-repeat;
         background-size: cover;
         background-position: center;
         border-radius: 10px;
@@ -1886,6 +2057,175 @@ body{
         cursor: pointer;
         transition: all 0.3s ease;
         display: none;
+    }
+
+    
+     /* Dinning room */
+
+     .dinning-img-1{
+        background: url(asset/images/contemporary-dinning-1.jpg) no-repeat;
+        background-size: cover;
+        background-position: center;
+    }
+
+    .dinning-img-2{
+        background: url(asset/images/contemporary-dinning-2.jpg) no-repeat;
+        background-size: cover;
+        background-position: center;
+    }
+
+    .dinning-img-3{
+        background: url(asset/images/contemporary-dinning-3.jpg) no-repeat;
+        background-size: cover;
+        background-position: center;
+    }
+
+    .dinning-img-4{
+        background: url(asset/images/contemporary-dinning-4.jpg) no-repeat;
+        background-size: cover;
+        background-position: center;
+    }
+
+    .dinning-img-5{
+        background: url(asset/images/dinning-room-2.jpg) no-repeat;
+        background-size: cover;
+        background-position: center;
+    }
+
+
+    /* Bedroom section */
+
+    .bed-room-img-1{
+        background: url(asset/images/bed-rrom-1.jpg) no-repeat;
+        background-size: cover;
+        background-position: center;
+    }
+
+    .bed-room-img-2{
+        background: url(asset/images/mordern-bed-1.jpg) no-repeat;
+        background-size: cover;
+        background-position: center;
+    }
+
+    .bed-room-img-3{
+        background: url(asset/images/bed-room-3.jpg) no-repeat;
+        background-size: cover;
+        background-position: center;
+    }
+
+    .bed-room-img-4{
+        background: url(asset/images/bed-room-4.jpg) no-repeat;
+        background-size: cover;
+        background-position: center;
+    }
+
+    .bed-room-img-5{
+        background: url(asset/images/hero-img-2.jpg) no-repeat;
+        background-size: cover;
+        background-position: center;
+    }
+
+    /* Office section */
+
+    .office-img-1{
+        background: url(asset/images/office-1.jpg) no-repeat;
+        background-size: cover;
+        background-position: center;
+    }
+
+    .office-img-2{
+        background: url(asset/images/office-sec-2.jpg) no-repeat;
+        background-size: cover;
+        background-position: center;
+    }
+
+    .office-img-3{
+        background: url(asset/images/office-sec-3.jpg) no-repeat;
+        background-size: cover;
+        background-position: center;
+    }
+
+    .office-img-4{
+        background: url(asset/images/office-sec-4.jpg) no-repeat;
+        background-size: cover;
+        background-position: center;
+    }
+
+    .office-img-5{
+        background: url(asset/images/office-sec-1.jpg) no-repeat;
+        background-size: cover;
+        background-position: center;
+    }
+
+    /* Shops section */
+
+    .shops-img-1{
+        background: url(asset/images/shop-1.jpg) no-repeat;
+        background-size: cover;
+        background-position: center;
+    }
+
+    .shops-img-2{
+        background: url(asset/images/shop-2.jpg) no-repeat;
+        background-size: cover;
+        background-position: center;
+    }
+
+    .shops-img-3{
+        background: url(asset/images/shop-3.jpg) no-repeat;
+        background-size: cover;
+        background-position: center;
+    }
+
+    .shops-img-4{
+        background: url(asset/images/shop-4.jpg) no-repeat;
+        background-size: cover;
+        background-position: center;
+    }
+
+    .shops-img-5{
+        background: url(asset/images/shop-5.jpg) no-repeat;
+        background-size: cover;
+        background-position: center;
+    }
+
+
+    /*Main load more section */
+
+    .main-load-img-1{
+        background: url(asset/images/living-modern-2.jpg) no-repeat;
+        background-size: cover;
+        background-position: center;
+    }
+
+    .main-load-img-2{
+        background: url(asset/images/office-sec-2.jpg) no-repeat;
+        background-size: cover;
+        background-position: center;
+    }
+
+    .main-load-img-3{
+        background: url(asset/images/dinning-room-2.jpg) no-repeat;
+        background-size: cover;
+        background-position: center;
+    }
+
+    .main-load-img-4{
+        background: url(asset/images/shop-2.jpg) no-repeat;
+        background-size: cover;
+        background-position: center;
+    }
+
+    .main-load-img-5{
+        background: url(asset/images/Lliving-modern-1.jpg) no-repeat;
+        background-size: cover;
+        background-position: center;
+    }
+
+    .main-load-img-6{
+        background: url(asset/images/office-sec-4.jpg) no-repeat;
+        background-size: cover;
+        background-position: center;
     }
 
     /* Banner section */
@@ -2411,12 +2751,12 @@ body{
         object-fit: cover;
     }
 
-    /* living section */
+      /* living section */
 
-    .living-card-1{
+      .living-card-1{
         width: 100%;
         height: 250px;
-        background: url(asset/images/living-room-1.jpg) no-repeat;
+        background: url(asset/images/Lliving-modern-1.jpg) no-repeat;
         background-size: cover;
         background-position: center;
         border-radius: 10px;
@@ -2438,7 +2778,7 @@ body{
     .living-card-3{
         width: 100%;
         height: 250px;
-        background: url(asset/images/main-tab-living.jpg) no-repeat;
+        background: url(asset/images/living-modern-2.jpg) no-repeat;
         background-size: cover;
         background-position: center;
         border-radius: 10px;
@@ -2460,7 +2800,7 @@ body{
     .living-card-5{
         width: 100%;
         height: 250px;
-        background: url(asset/images/living-room-2.jpg) no-repeat;
+        background: url(asset/images/living-modern-3.jpg) no-repeat;
         background-size: cover;
         background-position: center;
         border-radius: 10px;
@@ -2541,6 +2881,175 @@ body{
         cursor: pointer;
         transition: all 0.3s ease;
         display: none;
+    }
+
+
+    /* Dinning room */
+
+    .dinning-img-1{
+        background: url(asset/images/contemporary-dinning-1.jpg) no-repeat;
+        background-size: cover;
+        background-position: center;
+    }
+
+    .dinning-img-2{
+        background: url(asset/images/contemporary-dinning-2.jpg) no-repeat;
+        background-size: cover;
+        background-position: center;
+    }
+
+    .dinning-img-3{
+        background: url(asset/images/contemporary-dinning-3.jpg) no-repeat;
+        background-size: cover;
+        background-position: center;
+    }
+
+    .dinning-img-4{
+        background: url(asset/images/contemporary-dinning-4.jpg) no-repeat;
+        background-size: cover;
+        background-position: center;
+    }
+
+    .dinning-img-5{
+        background: url(asset/images/dinning-room-2.jpg) no-repeat;
+        background-size: cover;
+        background-position: center;
+    }
+
+
+    /* Bedroom section */
+
+    .bed-room-img-1{
+        background: url(asset/images/bed-rrom-1.jpg) no-repeat;
+        background-size: cover;
+        background-position: center;
+    }
+
+    .bed-room-img-2{
+        background: url(asset/images/mordern-bed-1.jpg) no-repeat;
+        background-size: cover;
+        background-position: center;
+    }
+
+    .bed-room-img-3{
+        background: url(asset/images/bed-room-3.jpg) no-repeat;
+        background-size: cover;
+        background-position: center;
+    }
+
+    .bed-room-img-4{
+        background: url(asset/images/bed-room-4.jpg) no-repeat;
+        background-size: cover;
+        background-position: center;
+    }
+
+    .bed-room-img-5{
+        background: url(asset/images/hero-img-2.jpg) no-repeat;
+        background-size: cover;
+        background-position: center;
+    }
+
+    /* Office section */
+
+    .office-img-1{
+        background: url(asset/images/office-1.jpg) no-repeat;
+        background-size: cover;
+        background-position: center;
+    }
+
+    .office-img-2{
+        background: url(asset/images/office-sec-2.jpg) no-repeat;
+        background-size: cover;
+        background-position: center;
+    }
+
+    .office-img-3{
+        background: url(asset/images/office-sec-3.jpg) no-repeat;
+        background-size: cover;
+        background-position: center;
+    }
+
+    .office-img-4{
+        background: url(asset/images/office-sec-4.jpg) no-repeat;
+        background-size: cover;
+        background-position: center;
+    }
+
+    .office-img-5{
+        background: url(asset/images/office-sec-1.jpg) no-repeat;
+        background-size: cover;
+        background-position: center;
+    }
+
+    /* Shops section */
+
+    .shops-img-1{
+        background: url(asset/images/shop-1.jpg) no-repeat;
+        background-size: cover;
+        background-position: center;
+    }
+
+    .shops-img-2{
+        background: url(asset/images/shop-2.jpg) no-repeat;
+        background-size: cover;
+        background-position: center;
+    }
+
+    .shops-img-3{
+        background: url(asset/images/shop-3.jpg) no-repeat;
+        background-size: cover;
+        background-position: center;
+    }
+
+    .shops-img-4{
+        background: url(asset/images/shop-4.jpg) no-repeat;
+        background-size: cover;
+        background-position: center;
+    }
+
+    .shops-img-5{
+        background: url(asset/images/shop-5.jpg) no-repeat;
+        background-size: cover;
+        background-position: center;
+    }
+
+
+    /*Main load more section */
+
+    .main-load-img-1{
+        background: url(asset/images/living-modern-2.jpg) no-repeat;
+        background-size: cover;
+        background-position: center;
+    }
+
+    .main-load-img-2{
+        background: url(asset/images/office-sec-2.jpg) no-repeat;
+        background-size: cover;
+        background-position: center;
+    }
+
+    .main-load-img-3{
+        background: url(asset/images/dinning-room-2.jpg) no-repeat;
+        background-size: cover;
+        background-position: center;
+    }
+
+    .main-load-img-4{
+        background: url(asset/images/shop-2.jpg) no-repeat;
+        background-size: cover;
+        background-position: center;
+    }
+
+    .main-load-img-5{
+        background: url(asset/images/Lliving-modern-1.jpg) no-repeat;
+        background-size: cover;
+        background-position: center;
+    }
+
+    .main-load-img-6{
+        background: url(asset/images/office-sec-4.jpg) no-repeat;
+        background-size: cover;
+        background-position: center;
     }
 
     /* Banner section */
