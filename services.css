@@ -47,6 +47,10 @@ body{
     background-color: var(--hero-nav-text-color--);
 }
 
+.testimonial .testimonial-txt .testimonial-btn a{
+    color: #333333;
+}
+
 /* Styles for screens 1200px and above (e.g., desktops) */
 @media only screen and (min-width: 1200px){
 
