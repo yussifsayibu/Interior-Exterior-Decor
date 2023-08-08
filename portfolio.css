@@ -193,6 +193,18 @@ body{
         letter-spacing: 3px;
     }
 
+    .taps-content-description{
+        padding-bottom: 20px;
+
+    }
+
+    .taps-content-description h2{
+        font-size: 24px;
+        line-height: 35px;
+        text-align: center;
+
+    }
+
     /* Projects nav */
 
     .project-nav{
@@ -222,6 +234,13 @@ body{
         padding: 50px 0px;
     }
 
+    .project-tabs-content{
+        display: grid;
+        grid-template-columns: repeat(3,1fr);
+        row-gap: 40px;
+        padding: 40px 80px;
+    }
+
     button.tab-active{
         color: var(--hero-nav-text-color--);
         background-color: var(--hero-nav-color--);
@@ -237,11 +256,7 @@ body{
   
     }
 
-    .project-tabs h2{
-        font-size: 24px;
-        line-height: 35px;
-
-    }
+    
 
     .first-card{
         width: 300px;
@@ -400,17 +415,13 @@ body{
   
     }
 
-    .project-tabs-content{
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        justify-content: space-between;
-        flex-wrap: wrap;
-        row-gap: 40px;
-        padding: 40px 80px;
-    }
+
 
     /* for living room */
+
+    /* .project-tabs .tabs-content-living-room{
+        display: none;
+    } */
 
     .tabs-content-living-room{
         display: grid;
@@ -490,8 +501,27 @@ body{
         background-position: center;
     }
 
+    /* .project-tabs .project-tabs-content-dinning{
+        display: none;
+    } */
+
+    .project-tabs-content-dinning{
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+    }
+
 
     /* Bedroom section */
+
+    /* .project-tabs .project-tabs-content-bed{
+        display: none;
+    } */
+
+    .project-tabs-content-bed{
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+
+    }
 
     .bed-room-img-1{
         background: url(asset/images/bed-rrom-1.jpg) no-repeat;
@@ -524,6 +554,15 @@ body{
     }
 
     /* Office section */
+
+    /* .project-tabs .project-tabs-content-office{
+        display: none;
+    } */
+
+    .project-tabs-content-office{
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+    }
 
     .office-img-1{
         background: url(asset/images/office-1.jpg) no-repeat;
@@ -986,6 +1025,25 @@ body{
         letter-spacing: 3px;
     }
 
+    .taps-content-description{
+        padding-bottom: 20px;
+
+    }
+
+    .taps-content-description h2{
+        font-size: 24px;
+        line-height: 35px;
+        text-align: center;
+
+    }
+
+    .project-tabs-content{
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        row-gap: 40px;
+        padding: 40px 40px;
+    }
+
     /* Projects nav */
 
     .project-nav{
@@ -1014,6 +1072,7 @@ body{
         align-items: center;
         padding: 50px 0px;
     }
+
 
     button.tab-active{
         color: var(--hero-nav-text-color--);
@@ -1188,15 +1247,7 @@ body{
   
     }
 
-    .project-tabs-content{
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        justify-content: space-between;
-        flex-wrap: wrap;
-        row-gap: 40px;
-        padding: 40px 50px;
-    }
+    
 
     .load-btn{
         display: flex;
@@ -1274,6 +1325,12 @@ body{
 
 
     /* Bedroom section */
+
+      .project-tabs-content-bed{
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+
+    }
 
     .bed-room-img-1{
         background: url(asset/images/bed-rrom-1.jpg) no-repeat;
@@ -1794,6 +1851,20 @@ body{
         letter-spacing: 3px;
     }
 
+    .taps-content-description{
+        padding-bottom: 20px;
+
+    }
+
+    .taps-content-description h2{
+        font-size: 24px;
+        line-height: 35px;
+        text-align: center;
+
+    }
+
+    
+
     /* Projects nav */
 
     .project-nav{
@@ -2008,13 +2079,10 @@ body{
         font-size: 15px;
   
     }
-
     .project-tabs-content{
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        justify-content: space-around;
-        flex-wrap: wrap;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        justify-items: center;
         row-gap: 40px;
         padding: 40px 20px;
     }
@@ -2618,6 +2686,18 @@ body{
         letter-spacing: 3px;
     }
 
+    .taps-content-description{
+        padding-bottom: 20px;
+
+    }
+
+    .taps-content-description h2{
+        font-size: 18px;
+        line-height: 35px;
+        text-align: center;
+
+    }
+
     /* Projects nav */
 
     .project-nav{
@@ -2673,12 +2753,6 @@ body{
     .tabs-main .project-tabs.content-active{
         display: block;
   
-    }
-
-    .project-tabs h2{
-        font-size: 24px;
-        line-height: 35px;
-
     }
 
     .first-card{
@@ -2837,7 +2911,6 @@ body{
         display: flex;
         align-items: center;
         justify-content: center;
-        justify-content: space-between;
         flex-wrap: wrap;
         row-gap: 40px;
         padding: 40px 20px;

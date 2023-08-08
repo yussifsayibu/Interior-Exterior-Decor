@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Modern Living Room</title>
+    <link rel="stylesheet" href="items.css">
+    <link rel="stylesheet" href="asset/fontawesome/css/all.css">
+    <link href="asset/fontawesome/webfonts/fa-brands-400.ttf" rel="stylesheet">
+
+</head>
+<body>
+
+    <!-- Messenger Chat Plugin Code -->
+    <div id="fb-root"></div>
+
+    <!-- Your Chat Plugin code -->
+    <div id="fb-customer-chat" class="fb-customerchat">
+    </div>
+
+    <script>
+      var chatbox = document.getElementById('fb-customer-chat');
+      chatbox.setAttribute("page_id", "107479621955515");
+      chatbox.setAttribute("attribution", "biz_inbox");
+    </script>
+
+    <!-- Your SDK code -->
+    <script>
+      window.fbAsyncInit = function() {
+        FB.init({
+          xfbml            : true,
+          version          : 'v17.0'
+        });
+      };
+
+      (function(d, s, id) {
+        var js, fjs = d.getElementsByTagName(s)[0];
+        if (d.getElementById(id)) return;
+        js = d.createElement(s); js.id = id;
+        js.src = 'https://connect.facebook.net/en_US/sdk/xfbml.customerchat.js';
+        fjs.parentNode.insertBefore(js, fjs);
+      }(document, 'script', 'facebook-jssdk'));
+    </script>
+
+    <header>
+        <nav class="nav">
+            <div class="hamburger">
+
+                <div class="line"></div>
+                <div class="line"></div>
+                <div class="line"></div>
+    
+            </div>
+            <a href="" class="nav-logo">M@C-<span>Sheff</span></a>
+
+            <ul class="nav-items">
+                <li><a href="index.html" >Home</a></li>
+                <li><a href="portfolio.html" class="active">Portfolio</a></li>
+                <li><a href="services.html">Services</a></li>
+                <li><a href="about.html">About</a></li>
+            </ul>
+
+            <button type="button" class="nav-btn"><a href="lets-talk.html">Let's talk</a></button>
+
+        </nav>
+
+    </header>
+
+    <div class="image-gallery">
+        <div class="image-card">
+            <img src="asset/images/Modern Living Room 2-Living Room_Beautify-20230522-144634.jpg" alt="Image 1">
+            <div class="image-overlay">
+                <h3>Luxe Living Space</h3>
+            </div>
+        </div>
+        <div class="image-card">
+            <img src="asset/images/Modern Living Room 2-Unnamed 11-20230523-133628.jpg" alt="Image 2">
+            <div class="image-overlay">
+                <h3>Elegant Classic Charm</h3>
+            </div>
+        </div>
+
+        <div class="image-card">
+            <img src="asset/images/Modern Living Room 2-Unnamed 12-20230523-133628.jpg" alt="Image 1">
+            <div class="image-overlay">
+                <h3>Elegant Classic</h3>
+            </div>
+        </div>
+
+        <div class="image-card">
+            <img src="asset/images/living-modern-3.jpg" alt="Image 2">
+            <div class="image-overlay">
+                <h3>Classic Charm</h3>
+            </div>
+        </div>
+
+        <!-- Add more image cards here -->
+    </div>
+
+
+       <!-- footer section -->
+
+       <footer>
+
+        <div class="footer-content">
+
+            <div class="logo-items slide-in">
+                <a href="index.html" class="nav-logo">M@C-<span>Sheff</span></a>
+
+                <p>
+                    Interior and Exterior
+                    <br>Decoration
+                </p>
+
+                <h4><i class="fa-solid fa-square-phone"></i>+233 24 099 3020</h4>
+
+                <h4><i class="fa-solid fa-paper-plane"></i>macsheff23@gmail.com</h4>
+
+            </div>
+
+            <div class="social-items slide-in">
+                <h3>Social Links</h3>
+
+                <h5><a href="https://web.facebook.com/macsheffdeco"><i class="fa-brands fa-facebook"></i>Facebook</a></h5>
+
+                <h5><a href=""><i class="fa-brands fa-instagram"></i>Instagram</a></h5>
+
+                <h5><a href=""><i class="fa-brands fa-tiktok"></i>TikTok</a></h4>
+                <h5><a href=""><i class="fa-brands fa-whatsapp"></i>WhatsApp</a></h4>
+                
+            </div>
+
+            <div class="short-links slide-in">
+                <h3>Short Links</h3>
+
+                <h5><a href="portfolio.html">Portfolio</a></h5>
+
+                <h5><a href="services.html">Services</a></h5>
+
+                <h5><a href="about.html">About</a></h4>
+                <h5><a href="lets-talk.html">Contact</a></h4>
+                
+            </div>
+        </div>
+
+        <div class="copy-rights">
+            <p id="copyright">
+                
+            </p>
+        </div>
+
+    </footer>
+
+    <script src="portfolio.js"></script>
+
+</body>
+</html>

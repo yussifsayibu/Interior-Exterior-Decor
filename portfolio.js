@@ -60,7 +60,7 @@ function loadMore(){
   const lessBtn = document.querySelector('.js-show-less');
 
   loadBtn.addEventListener('click', function (){
-    hiddenSection.style.display = 'flex';
+    hiddenSection.style.display = 'grid';
   
     lessBtn.style.display = 'block';
     loadBtn.style.display = 'none';
